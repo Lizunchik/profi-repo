@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 100px;
+    border-bottom: 1px solid #ececec;
+}
+
+.headerInside {
+    height: inherit;
+    /* background: lightgreen; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    width: 165px;
+    line-height: 51px;
+    background: url(img/logo.svg) no-repeat;
+    font-size: 27px;
+    font-weight: 300;
+    padding-left: 60px;
+}
+.searchBrowse img{
+    margin-left: 8px;
+}
+#searchImage{
+
+}
+.logo span {
+    color: #f16d7f;
+    font-weight: 400;
+}
+.searchWrap {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.accountBtn {
+    padding: 15px;
+    letter-spacing: 0.38px;
+    background-color: #f16d7f;
+    color: white;
+    border: none;
+}
+.searchBrowse {
+    height: inherit;
+    padding: 12px;
+    font-size: 14px;
+    color: #222222;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    border-right: 1px solid #e6e6e6;
+}
+.accountBtn img{
+    margin-left: 8px;
+}
+.slider{
+    width: 100%;
+    height: 700px;
+background-color: #e8e8e8;
+    background-image: url(img/man.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+  
+    position: relative;
+
+}
+.slider-message{
+   position: absolute;
+    top: 270px;
+    left: 240px;
+}
+
+.slider-message div:nth-child(2){
+    position: absolute;
+color: #222222;
+font-size: 40px;
+font-weight: 400;
+text-transform: uppercase;
+}
+.slider-message div{
+    display: inline-block;
+}
+.block1 div{
+    background-repeat: no-repeat;
+   margin-bottom: 20px;
+}
+.block1{
+   position: relative;
+    width: 1141px;
+    
+}
+.block1 div:first-child{
+    width: 560px;
+    height: 542px;
+    background-image: url(img/card1.jpg);
+}
+.block1 div:nth-child(2){
+    position: absolute;
+    right: 0;
+    top:0;
+    width: 560px;
+    height: 260px;
+    background-image: url(img/card2.jpg);
+}
+.block1 div:nth-child(3){
+    position: absolute;
+    width: 560px;
+    height: 542px;
+    bottom: 0;
+    right: 0;
+    background-image: url(img/card3.jpg);
+    background-position: bottom;
+     margin-bottom: 0;
+}
+.block1 div:nth-child(4){
+    background-color: #dadad2;
+    width: 560px;
+    height: 260px;
+    background-image: url(img/card4.jpg);
+    background-position: right;
+   
+}
+.slider-message div:nth-child(3){
+    display: inline-block;
+    font-size: 60px;
+}
+.slider-message div:nth-child(3) span{
+    color: #f16d7f;
+letter-spacing: 1px;
+}
+.searchWrap input {
+    height: inherit;
+    padding: 0 16px;
+    width: 317px;
+    border: none;
+    outline: none;
+}
+
+.searchWrap button {
+    height: inherit;
+    padding: 0 8px;
+    border: 0;
+    background: none;
+    border-left: 1px solid #e6e6e6;
+}
+
+.headerCart {
+    margin-left: auto;
+    margin-right: 25px;
+}
+.topNav {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topNav a:not(:last-child) {
+    margin-right: 45px;
+}
+
+.topNav a {
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #222222;
+}
+
+.topNav a:hover {
+    color: #f16d7f;
+}
