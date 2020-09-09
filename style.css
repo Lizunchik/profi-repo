@@ -94,16 +94,23 @@ text-transform: uppercase;
 .slider-message div{
     display: inline-block;
 }
-.block1 div{
+.block1>div{
     background-repeat: no-repeat;
-   margin-bottom: 20px;
+
+    position: absolute;
+}
+body>div:not(.topNav){
+    margin-bottom: 100px;
 }
 .block1{
    position: relative;
     width: 1141px;
+    height: 823px;
+    margin: 0 auto;
+
     
 }
-.block1 div:first-child{
+.block1>div:nth-child(1){
     width: 560px;
     height: 542px;
     background-image: url(img/card1.jpg);
@@ -116,6 +123,7 @@ text-transform: uppercase;
     height: 260px;
     background-image: url(img/card2.jpg);
 }
+
 .block1 div:nth-child(3){
     position: absolute;
     width: 560px;
@@ -132,6 +140,8 @@ text-transform: uppercase;
     height: 260px;
     background-image: url(img/card4.jpg);
     background-position: right;
+    position: absolute;
+    bottom: 0;
    
 }
 .slider-message div:nth-child(3){
@@ -183,4 +193,46 @@ letter-spacing: 1px;
 
 .topNav a:hover {
     color: #f16d7f;
+}
+.card_block{
+    position: relative;
+}
+.card_header{
+    background-color: white;
+    height: 85px;
+padding: 16px;
+    box-sizing: border-box;
+font-size: 18px;
+font-weight: 400;
+text-transform: uppercase;
+position: absolute;
+    top:50px;
+}
+
+.card_header>div{
+    color: #f16d7f;
+font-size: 30px;
+letter-spacing: 0.75px;
+}
+
+
+.featured-header>div:first-child{
+    width: 200px;
+
+color: #222222;
+font-family: Lato;
+font-size: 30px;
+font-weight: 700;
+line-height: 54px;
+letter-spacing: 0.75px;
+    margin: 0 auto;
+}
+.featured-header>div:nth-child(2){
+
+width: 400px;
+
+color: #9f9f9f;
+margin: 16px auto 60px auto;
+
+letter-spacing: 0.35px;
 }
