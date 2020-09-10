@@ -58,6 +58,7 @@ body {
     background-color: #f16d7f;
     color: white;
     border: none;
+   
 }
 .brouseBtn{
     padding: 15px;
@@ -68,8 +69,36 @@ body {
     width: 212px;
     font-size: 16px;
 font-weight: 700;
+  margin: 0 auto;
   
 }
+.shadowBtn{
+      
+    letter-spacing: 0.38px;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border: 1px solid white;
+    position: relative;
+        margin-top: 100px;
+    width: 123px;
+    height: 40px;
+}
+.shadow span{
+    
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    
+}
+.shadow img{
+    position: absolute;
+    left: 12px;
+    bottom: 10px;
+}
+
 .searchBrowse {
     height: inherit;
     padding: 12px;
@@ -278,8 +307,14 @@ body > div:not(.topNav) {
 }
 
 .products {
+    
     width: 1140px;
     margin: 0 auto;
+
+}
+.center{
+    width: inherit;
+    height: 50px;
     text-align: center;
 }
 
@@ -314,19 +349,34 @@ body > div:not(.topNav) {
 #p8 {
     background-image: url(img/p8.jpg);
 }
+.shadow{
+    display: none;
+    width: 261px;
+    height: 280px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top:0;
+    left:0;
+text-align: center;
 
+    
+}
+.product:hover .shadow{
+    display: block;
+}
 .product {
     position: relative;
     width: 261px;
-    height: 342px;
+    height: 360px;
 
     background-repeat: no-repeat;
     background-position: top;
 }
 
-.product > div {
-    position: absolute;
-    bottom: 0;
+.product-desc{
+        position: absolute;
+    bottom: 20px;
+    left: 15px;
 
     color: #222222;
 
@@ -383,6 +433,9 @@ margin-top: 30px;
     display: inline-block;
 
 
+}
+.product:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
 }
 .offer_text{
     width: 330px;
@@ -599,7 +652,7 @@ text-transform: uppercase;
 .social span{
     color: #7a7a7a;
     position: absolute;
-    margin-left: 190px;
+    margin-left: 240px;
     margin-top: 33px;
 }
 .links{
@@ -611,6 +664,15 @@ text-transform: uppercase;
     display: flex;
     justify-content: space-between;
     
+}
+.navigate_review{
+    position: absolute;
+    top: 160px;
+    left: 112px;
+    width: 200px;
+}
+.navigate_review img{
+    display: inline-block;
 }
 .links a{
     display: inline-block;
