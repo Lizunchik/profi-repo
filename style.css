@@ -127,6 +127,7 @@ body {
     background-repeat: no-repeat;
     background-position: right;
     position: relative;
+    margin-bottom: 100px;
 }
 
 .slider-message {
@@ -160,6 +161,7 @@ body {
     width: 1141px;
     height: 823px;
     margin: 0 auto;
+    margin-bottom: 100px;
 
 
 }
@@ -298,6 +300,9 @@ body {
 
     letter-spacing: 0.35px;
 }
+.fetured-items{
+    margin-bottom: 100px;
+}
 
 .line {
     width: 1140px;
@@ -411,6 +416,7 @@ body {
     width: 1140px;
     margin: 0 auto;
     position: relative;
+    margin-bottom: 100px;
 }
 
 .offer_block div {
@@ -521,6 +527,7 @@ body {
     background-repeat: no-repeat;
     position: relative;
     margin: 0 auto;
+    margin-bottom: 100px;
 }
 .subscribeWrap {
     margin-top: 100px;
@@ -751,6 +758,7 @@ body {
     position: relative;
     width: 1100px;
     margin: 0 auto;
+    margin-bottom: 100px;
 }
 
 .desc_text span {
