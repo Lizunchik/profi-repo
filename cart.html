@@ -164,19 +164,19 @@
     <div class="shipping_detail container">
         <div class="shipping_adress">
             <div class="shipping_header">Shipping Adress</div>
-            <input list="city" placeholder="City">
+            <input list="city" placeholder="City" pattern="[A-Za-zА-Яа-яЁё]">
             <datalist id="city">
                 <option value="Текст1">
                 <option value="Текст2">
             </datalist>
-            <input type="text" placeholder="State">
-            <input type="text" placeholder="Postcode / Zip">
+            <input type="text" placeholder="State" pattern="[A-Za-zА-Яа-яЁё]">
+            <input type="text" placeholder="Postcode / Zip" pattern="[0-9]{6}">
             <input type="submit" value="get a quote">
         </div>
         <div class="coupon_discount">
             <div class="shipping_header">coupon discount</div>
             Enter your coupon code if you have one
-            <input type="text" placeholder="State">
+            <input type="text" placeholder="State" [A-Za-zА-Яа-яЁё]>
             <input type="submit" value="Apply coupon">
 
         </div>
