@@ -402,7 +402,6 @@ body {
 .new_arrivals {
   height: 150px;
   background-color: #f8f3f4;
-  margin-bottom: 100px;
 }
 
 .price {
@@ -1026,6 +1025,7 @@ body {
 
 main {
   margin-bottom: 44px;
+  margin-top: 100px;
 }
 
 .shipping_adress {
@@ -1217,5 +1217,99 @@ footer {
 .copyrightsRight i:hover {
   color: white;
   background: #f16d7f;
+}
+
+.picture {
+  border: 1px solid #eaeaea;
+  background-color: #f7f7f7;
+  height: 777px;
+  background-image: url(img/single_page/girl.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card {
+  margin: 0 auto;
+  margin-top: -70px;
+  width: 1141px;
+  height: 730px;
+  border: 1px solid #eaeaea;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .content {
+  width: 645px;
+  height: 535px;
+  text-align: center;
+}
+
+.card .content .top_header {
+  color: #f16d7f;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.card .content nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+}
+
+.card .content nav a {
+  height: 2px;
+  width: 50px;
+  background-color: #f7f7f7;
+}
+
+.card .content nav a.active_link {
+  background-color: #f16d7f;
+  width: 70px;
+}
+
+.card .content nav a:hover {
+  background-color: #f16d7f;
+  width: 70px;
+}
+
+.card .content .article_header {
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 65px;
+}
+
+.card .content .article_desc {
+  width: 618px;
+  height: 60px;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.card .content article .info {
+  width: 335px;
+  height: 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .content article .info div {
+  width: 130px;
 }
 /*# sourceMappingURL=style.css.map */

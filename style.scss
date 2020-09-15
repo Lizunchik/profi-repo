@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+$single_page_img_path: "img/single_page";
 
 body {
     margin: 0;
@@ -394,7 +395,7 @@ body {
 .new_arrivals{
     height: 150px;
     background-color: #f8f3f4;
-    margin-bottom: 100px;
+
 }
 
 .price {
@@ -962,6 +963,7 @@ border: 1px solid #eaeaea;
 }
 main{
     margin-bottom: 44px;
+    margin-top: 100px;
 }
 .shipping_adress{
     height: 270px;
@@ -1119,4 +1121,77 @@ footer {
 .copyrightsRight i:hover {
     color: white;
     background: #f16d7f;
+}
+.picture{
+    
+    border: 1px solid #eaeaea;
+    background-color: #f7f7f7;
+    height: 777px;
+    background-image: url(#{$single_page_img_path}/girl.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card{
+margin: 0 auto;
+margin-top: -70px;
+width: 1141px;
+height: 730px;
+border: 1px solid #eaeaea;
+background-color: #ffffff;
+display: flex;
+justify-content: center;
+align-items: center;
+    .content{
+        width: 645px;
+        height: 535px;
+        
+        text-align: center;
+        .top_header{
+            color: #f16d7f;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+        }
+        nav a{
+            
+            height: 2px;
+            width: 50px;
+            background-color: #f7f7f7;
+        }
+        nav a.active_link{
+            background-color: #f16d7f;
+            width: 70px;
+        }
+        nav a:hover{
+            background-color: #f16d7f;
+            width: 70px;
+        }
+        .article_header{
+            text-transform: uppercase;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 65px;
+        }
+        .article_desc{
+            width: 618px;
+height: 60px;
+font-weight: 300;
+font-size: 14px;
+        }
+        article .info{
+            width: 335px;
+            height: 11px;
+            display: flex;
+            justify-content: space-between;
+            
+            div{
+                width: 130px;
+            }
+        }
+
+    }
 }
