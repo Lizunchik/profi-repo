@@ -895,15 +895,16 @@ body {
 .new_arrivals nav a {
     text-decoration: none;
 }
-.new_arrivals{
+
+.new_arrivals {
     nav a {
         text-decoration: none;
         color: #636363;
-    
+
         &:hover {
             color: $pink_color;
         }
-    
+
         &:last-child {
             font-weight: 700;
             color: $pink_color;
@@ -1320,39 +1321,43 @@ footer {
 
     }
 }
-.like_also{
+
+.like_also {
     width: 1141px;
     margin: 0 auto;
     padding-bottom: 95px;
 
-    .like_also_header{
+    .like_also_header {
         padding-top: 120px;
         padding-bottom: 70px;
         text-align: center;
         font-size: 24px;
-font-weight: 400;
-color: #4d4d4d;
-text-transform: uppercase;
-margin: 0 auto;
+        font-weight: 400;
+        color: #4d4d4d;
+        text-transform: uppercase;
+        margin: 0 auto;
     }
-    .galery{
+
+    .galery {
         display: flex;
         justify-content: space-between;
     }
-    figure{
+
+    figure {
         display: inline-block;
         /* Style for "Rectangle" */
-width: 261px;
-height: 280px;
-background-color: #e9e9e9;
-margin: 0;
-        img{
+        width: 261px;
+        height: 280px;
+        background-color: #e9e9e9;
+        margin: 0;
+
+        img {
             display: block;
             margin: 0 auto;
         }
 
-        figcaption{
-            display:block;
+        figcaption {
+            display: block;
             height: 45px;
             width: 160px;
             padding: 15px;
@@ -1360,13 +1365,13 @@ margin: 0;
             color: #6f6e6e;
             font-size: 14px;
 
-            span{
+            span {
                 color: #f16d7f;
 
-font-size: 16px;
-font-weight: 700;
+                font-size: 16px;
+                font-weight: 700;
             }
         }
-       
+
     }
 }
