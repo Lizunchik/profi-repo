@@ -1499,9 +1499,9 @@ footer {
             align-items: center;
             justify-content: center;
             &>div{
-                width: 123px;
+                width: 160px;
                 color: #ffffff;
-                
+                font-size: 13px;
              
                 & div:nth-child(1){
                     height: 40px;
@@ -1518,14 +1518,14 @@ footer {
                     background-image: url(img/arrow-circle.png);
                     background-position: center;
                     background-repeat: no-repeat;
-                    width: 49px;
+                    width: 49%;
                     border-radius: 3px;
                     border: 1px solid #ffffff;
                 }
                 & div:nth-child(3){
                     display: inline-block;
                     height: 40px;
-                    width: 49px;
+                    width: 49%;
                     border-radius: 3px;
 border: 1px solid #ffffff;
 background-image: url(img/like.png);
@@ -1539,10 +1539,13 @@ background-repeat: no-repeat;
             &:hover .boot-shadow{
                 display: flex;
             }
+            &>div:not(.boot-shadow){
+                text-transform: uppercase;
+            }
         }
         .col-4 div{
             padding: 10px;
-            text-transform: uppercase;
+            
             box-sizing: border-box;
         }
         .col-4 div:nth-child(3){

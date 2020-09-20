@@ -12385,8 +12385,9 @@ footer {
 }
 
 .container .row-picture .boot-shadow > div {
-  width: 123px;
+  width: 160px;
   color: #ffffff;
+  font-size: 13px;
 }
 
 .container .row-picture .boot-shadow > div div:nth-child(1) {
@@ -12405,7 +12406,7 @@ footer {
   background-image: url(img/arrow-circle.png);
   background-position: center;
   background-repeat: no-repeat;
-  width: 49px;
+  width: 49%;
   border-radius: 3px;
   border: 1px solid #ffffff;
 }
@@ -12413,7 +12414,7 @@ footer {
 .container .row-picture .boot-shadow > div div:nth-child(3) {
   display: inline-block;
   height: 40px;
-  width: 49px;
+  width: 49%;
   border-radius: 3px;
   border: 1px solid #ffffff;
   background-image: url(img/like.png);
@@ -12427,9 +12428,12 @@ footer {
   display: flex;
 }
 
+.container .row-picture .col-4 > div:not(.boot-shadow) {
+  text-transform: uppercase;
+}
+
 .container .row-picture .col-4 div {
   padding: 10px;
-  text-transform: uppercase;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
