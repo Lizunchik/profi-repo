@@ -9,14 +9,12 @@ body {
 }
 
 .container {
-    width: 1140px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+
 }
 
 .header {
-    height: 100px;
+    min-height: 100px;
+    margin-top: 15px;
     border-bottom: 1px solid #ececec;
 }
 
@@ -26,6 +24,10 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+   
+    @include media-breakpoint-down(md){
+        flex-direction: column;
+    }
 }
 
 .logo {
@@ -52,9 +54,14 @@ body {
     display: flex;
     align-items: center;
     height: 40px;
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    overflow: hidden;
+    outline: 1px solid #e6e6e6;
+    @include media-breakpoint-down(md){
+        margin-top: 10px;
+    }
+    @include media-breakpoint-down(sm){
+        display: -webkit-inline-box;
+    }
+ 
 }
 
 .accountBtn {
@@ -63,6 +70,10 @@ body {
     background-color: #f16d7f;
     color: white;
     border: none;
+
+    @include media-breakpoint-down(md){
+        margin-bottom: 10px;
+    }
 
 }
 
@@ -215,13 +226,20 @@ body {
     color: #f16d7f;
     letter-spacing: 1px;
 }
+.required{
+    color: red;
+}
 
 .searchWrap input {
     height: inherit;
     padding: 0 16px;
-    width: 317px;
+  
     border: none;
     outline: none;
+
+    @include media-breakpoint-down(sm){
+        width: 100px;
+    }
 }
 
 .searchWrap button {
@@ -235,13 +253,24 @@ body {
 .headerCart {
     margin-left: auto;
     margin-right: 25px;
+    @include media-breakpoint-down(md){
+        margin-left: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 .topNav {
-    height: 50px;
+    min-height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include media-breakpoint-down(md){
+        flex-direction: column;
+        align-items: flex-start;
+      
+    }
+
 }
 
 .topNav a:not(:last-child) {
@@ -396,11 +425,7 @@ body {
     text-transform: uppercase;
 }
 
-.new_arrivals {
-    height: 150px;
-    background-color: #f8f3f4;
 
-}
 
 .price {
     margin-top: 17px;
@@ -534,18 +559,24 @@ body {
     margin: 0 auto;
     margin-bottom: 100px;
 }
+.footer-row{
+    width: 100%;
+}
 
 .subscribeWrap {
     margin-top: 100px;
-    height: 438px;
+    min-height: 438px;
     background: url(img/subscribe.jpg) no-repeat center bottom, #ccc;
     background-blend-mode: overlay;
     background-size: cover;
+    display: flex;
+    justify-content: center;
 }
 
 .subscribe {
     display: flex;
     height: inherit;
+    justify-content: center;
 }
 
 .subscribe_old div {
@@ -586,20 +617,29 @@ body {
 .reviews {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .reviewUnit {
-    width: 500px;
+    
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .reviewUnitLeft {
-    width: 83px;
+   
 }
 
 .reviewUnitRight {
-    width: 386px;
+    display: flex;
+    div:first-child{
+        margin-right: 20px;
+    }
+
+    @include media-breakpoint-down(sm){
+        flex-direction: column;
+    }
+
 }
 
 .reviewUnitRight blockquote {
@@ -608,6 +648,9 @@ body {
     font-style: italic;
     line-height: 26px;
     font-weight: 700;
+    @include media-breakpoint-down(sm){
+        margin-top: 20px;
+    }
 }
 
 .reviewName {
@@ -651,6 +694,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include media-breakpoint-down(sm){
+        margin-top: 20px;
+    }
 }
 
 .subscribeRightHead {
@@ -661,15 +708,22 @@ body {
 
 .subscribeRightText {
     margin: 10px 0 35px;
+    text-align: center;
 }
 
 .subscribeForm {
-    height: 46px;
+    min-height: 46px;
+    button, input{
+        min-height: inherit;
+    }
+
+    
+
 }
 
 .subscribeForm input {
     height: inherit;
-    width: 334px;
+ 
     border: none;
     outline: none;
     padding: 0 28px;
@@ -678,6 +732,13 @@ body {
     border-top-left-radius: 23px;
     border-bottom-left-radius: 23px;
     float: left;
+    @include media-breakpoint-down(sm){
+        border-top-right-radius: 23px;
+        border-bottom-right-radius: 23px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 200px;
+    }
 }
 
 .subscribeForm button {
@@ -690,6 +751,16 @@ body {
     padding: 0 20px;
     outline: none;
     cursor: pointer;
+
+        @include media-breakpoint-down(sm){
+            border-top-left-radius: 23px;
+            border-bottom-left-radius: 23px;
+        
+            margin-top: 15px;
+            margin-bottom: 15px;
+
+        }
+    
 }
 
 .autor {
@@ -897,6 +968,15 @@ body {
 }
 
 .new_arrivals {
+   color: #f16d7f;
+   background-color: #f8f3f4;
+    min-height: 148px;
+    display: flex;
+    .row{
+        width: 100%;
+        justify-content: space-between;
+    }
+
     nav a {
         text-decoration: none;
         color: #636363;
@@ -921,7 +1001,7 @@ body {
 .arrivals-header {
     font-size: 24px;
     text-transform: uppercase;
-    color: #f16d7f;
+    
 }
 
 .cart {
@@ -1010,10 +1090,6 @@ main {
     margin-top: 100px;
 }
 
-.shipping_adress {
-    height: 270px;
-
-}
 
 .shipping input:not(:last-child) {
     display: block;
@@ -1080,7 +1156,7 @@ hr {
 
 }
 
-.shipping_header {
+.list_header {
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -1577,7 +1653,7 @@ footer {
     }
 }
 
-.container-fluid {
+.advantages-product {
 
     background-color: #222224;
     height: 341px;
@@ -1675,4 +1751,93 @@ footer {
     display: flex;
     height: 30px;
     align-items: center;
+}
+.shipping_adress{
+    width: 100%;
+    min-height: 100px;
+
+    margin-top: 100px;
+    .col-md-6:nth-child(2){
+        margin-top: 15px;
+    }
+    .register-card{
+        position: relative;
+        margin-left: 20px;
+        margin-top: 20px;
+        span:first-child{
+            text-transform: uppercase;
+        }
+        button{
+            background-color: white;
+            border: none;
+            margin-left: 20px;
+        }
+        form{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            input{
+                border: 1px solid #eaeaea;
+                height: 50px;
+            }
+
+            input[type=submit]{
+                margin-top: 20px;
+                margin-bottom: 15px;
+                width: 180px;
+                
+                background-color: #ffffff;
+    
+    font-weight: 700;
+            }
+            input[type=password]{
+                margin-bottom: 25px;
+                width: 100%;
+            }
+            input[type=email]{
+                width: 100%;
+            }
+
+            label{
+                margin-top: 15px;
+
+            }
+        }
+
+    }
+    .subHeader{
+        color: #b3b2b2;
+
+
+    }
+
+    .shipping-card{
+      
+        margin-left: 20px;
+        margin-top: 20px;
+
+   
+
+        label{
+            text-transform: uppercase;
+        }
+        .inputs{
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .fast-easy{
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            img{
+                margin-right: 10px;
+            }
+        }
+        button{
+            width: 180px;
+            height: 50px;
+            background-color: #ffffff;
+border: 1px solid #eaeaea;
+font-weight: 700;
+        }
+    }
 }
