@@ -8,9 +8,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-.container {
-
-}
+.container {}
 
 .header {
     min-height: 100px;
@@ -24,8 +22,8 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-   
-    @include media-breakpoint-down(md){
+
+    @include media-breakpoint-down(md) {
         flex-direction: column;
     }
 }
@@ -55,13 +53,15 @@ body {
     align-items: center;
     height: 40px;
     outline: 1px solid #e6e6e6;
-    @include media-breakpoint-down(md){
+
+    @include media-breakpoint-down(md) {
         margin-top: 10px;
     }
-    @include media-breakpoint-down(sm){
+
+    @include media-breakpoint-down(sm) {
         display: -webkit-inline-box;
     }
- 
+
 }
 
 .accountBtn {
@@ -71,7 +71,7 @@ body {
     color: white;
     border: none;
 
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
         margin-bottom: 10px;
     }
 
@@ -226,18 +226,19 @@ body {
     color: #f16d7f;
     letter-spacing: 1px;
 }
-.required{
+
+.required {
     color: red;
 }
 
 .searchWrap input {
     height: inherit;
     padding: 0 16px;
-  
+
     border: none;
     outline: none;
 
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
         width: 100px;
     }
 }
@@ -253,7 +254,8 @@ body {
 .headerCart {
     margin-left: auto;
     margin-right: 25px;
-    @include media-breakpoint-down(md){
+
+    @include media-breakpoint-down(md) {
         margin-left: 0;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -265,10 +267,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    @include media-breakpoint-down(md){
+
+    @include media-breakpoint-down(md) {
         flex-direction: column;
         align-items: flex-start;
-      
+
     }
 
 }
@@ -559,7 +562,8 @@ body {
     margin: 0 auto;
     margin-bottom: 100px;
 }
-.footer-row{
+
+.footer-row {
     width: 100%;
 }
 
@@ -621,22 +625,21 @@ body {
 }
 
 .reviewUnit {
-    
+
     display: flex;
     justify-content: center;
 }
 
-.reviewUnitLeft {
-   
-}
+.reviewUnitLeft {}
 
 .reviewUnitRight {
     display: flex;
-    div:first-child{
+
+    div:first-child {
         margin-right: 20px;
     }
 
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
         flex-direction: column;
     }
 
@@ -648,7 +651,8 @@ body {
     font-style: italic;
     line-height: 26px;
     font-weight: 700;
-    @include media-breakpoint-down(sm){
+
+    @include media-breakpoint-down(sm) {
         margin-top: 20px;
     }
 }
@@ -695,7 +699,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
         margin-top: 20px;
     }
 }
@@ -713,17 +717,19 @@ body {
 
 .subscribeForm {
     min-height: 46px;
-    button, input{
+
+    button,
+    input {
         min-height: inherit;
     }
 
-    
+
 
 }
 
 .subscribeForm input {
     height: inherit;
- 
+
     border: none;
     outline: none;
     padding: 0 28px;
@@ -732,7 +738,8 @@ body {
     border-top-left-radius: 23px;
     border-bottom-left-radius: 23px;
     float: left;
-    @include media-breakpoint-down(sm){
+
+    @include media-breakpoint-down(sm) {
         border-top-right-radius: 23px;
         border-bottom-right-radius: 23px;
         margin-top: 15px;
@@ -752,15 +759,15 @@ body {
     outline: none;
     cursor: pointer;
 
-        @include media-breakpoint-down(sm){
-            border-top-left-radius: 23px;
-            border-bottom-left-radius: 23px;
-        
-            margin-top: 15px;
-            margin-bottom: 15px;
+    @include media-breakpoint-down(sm) {
+        border-top-left-radius: 23px;
+        border-bottom-left-radius: 23px;
 
-        }
-    
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+    }
+
 }
 
 .autor {
@@ -968,11 +975,12 @@ body {
 }
 
 .new_arrivals {
-   color: #f16d7f;
-   background-color: #f8f3f4;
+    color: #f16d7f;
+    background-color: #f8f3f4;
     min-height: 148px;
     display: flex;
-    .row{
+
+    .row {
         width: 100%;
         justify-content: space-between;
     }
@@ -1001,7 +1009,7 @@ body {
 .arrivals-header {
     font-size: 24px;
     text-transform: uppercase;
-    
+
 }
 
 .cart {
@@ -1527,9 +1535,11 @@ footer {
                 margin-left: 5px;
             }
         }
+
         .col-4>div:first-child {
             width: 175px;
         }
+
         .col-4>div {
 
             height: 40px;
@@ -1752,92 +1762,105 @@ footer {
     height: 30px;
     align-items: center;
 }
-.shipping_adress{
+
+.shipping_adress {
     width: 100%;
     min-height: 100px;
 
     margin-top: 100px;
-    .col-md-6:nth-child(2){
+
+    .col-md-6:nth-child(2) {
         margin-top: 15px;
     }
-    .register-card{
+
+    .register-card {
         position: relative;
         margin-left: 20px;
         margin-top: 20px;
-        span:first-child{
+
+        span:first-child {
             text-transform: uppercase;
         }
-        button{
+
+        button {
             background-color: white;
             border: none;
             margin-left: 20px;
         }
-        form{
+
+        form {
             margin-top: 15px;
             margin-bottom: 15px;
-            input{
+
+            input {
                 border: 1px solid #eaeaea;
                 height: 50px;
             }
 
-            input[type=submit]{
+            input[type=submit] {
                 margin-top: 20px;
                 margin-bottom: 15px;
                 width: 180px;
-                
+
                 background-color: #ffffff;
-    
-    font-weight: 700;
+
+                font-weight: 700;
             }
-            input[type=password]{
+
+            input[type=password] {
                 margin-bottom: 25px;
                 width: 100%;
             }
-            input[type=email]{
+
+            input[type=email] {
                 width: 100%;
             }
 
-            label{
+            label {
                 margin-top: 15px;
 
             }
         }
 
     }
-    .subHeader{
+
+    .subHeader {
         color: #b3b2b2;
 
 
     }
 
-    .shipping-card{
-      
+    .shipping-card {
+
         margin-left: 20px;
         margin-top: 20px;
 
-   
 
-        label{
+
+        label {
             text-transform: uppercase;
         }
-        .inputs{
+
+        .inputs {
             margin-top: 15px;
             margin-bottom: 15px;
         }
-        .fast-easy{
+
+        .fast-easy {
             margin-top: 20px;
             margin-bottom: 20px;
 
-            img{
+            img {
                 margin-right: 10px;
             }
         }
-        button{
+
+        button {
             width: 180px;
             height: 50px;
             background-color: #ffffff;
-border: 1px solid #eaeaea;
-font-weight: 700;
+            border: 1px solid #eaeaea;
+            font-weight: 700;
         }
     }
 }

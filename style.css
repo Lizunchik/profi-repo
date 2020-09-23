@@ -11554,7 +11554,8 @@ body {
   min-height: 46px;
 }
 
-.subscribeForm button, .subscribeForm input {
+.subscribeForm button,
+.subscribeForm input {
   min-height: inherit;
 }
 
