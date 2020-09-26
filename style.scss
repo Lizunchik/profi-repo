@@ -101,7 +101,7 @@ body {
     border: 1px solid white;
     position: relative;
     margin-top: 100px;
-    width: 123px;
+    width: 153px;
     height: 40px;
 }
 
@@ -131,6 +131,32 @@ body {
 
 .accountBtn img {
     margin-left: 8px;
+}
+.slider-main{
+    background-image: url(img/man.jpg);
+    height: 665px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #e8e8e8;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    font-size: 40px;
+
+    .message{
+        margin-left: 10%;
+        border-left: 12px solid $pink_color;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        span:first-child{
+            font-size: 60px;
+        }
+        span:last-child{
+            color: $pink_color;
+        }
+    }
+
 }
 
 .slider {
@@ -226,6 +252,54 @@ body {
     color: #f16d7f;
     letter-spacing: 1px;
 }
+.hot_deal{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(160px,1fr));
+    grid-template-rows: repeat(3, 1fr);
+
+    gap: 20px;
+    margin-top: 100px;
+   
+    &>div{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #dadad2;
+        background-size: cover;
+
+        @media (max-width: 992px) {
+            grid-column: auto/auto;
+            grid-row: auto/auto;
+            
+        }
+    }
+
+    &>div:first-child{
+        height: 542px;
+        background-image: url(img/card1.jpg);
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    div:nth-child(2){
+        height: 261px;
+        background-image: url(img/card2.jpg);
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    div:nth-child(3){
+        height: 542px;
+        background-image: url(img/card3.jpg);
+        grid-column: 2/3;
+        grid-row: 2/4;
+    }
+    div:nth-child(4){
+        height: 261px; 
+        background-image: url(img/card4.jpg);
+        grid-column: 1/2;
+        grid-row: 3/4;
+
+    }
+    
+}
 
 .required {
     color: red;
@@ -298,20 +372,27 @@ body {
 
 .card_header {
     background-color: white;
-    height: 85px;
+   min-height: 85px;
     padding: 16px;
     box-sizing: border-box;
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase;
-    position: absolute;
-    top: 50px;
+  display: inline-block;
+  margin-top: 20px;
+  @include media-breakpoint-down(sm){
+      background-color: rgba(256,256,256,0.8);
+  }
 }
 
 .card_header>div {
     color: #f16d7f;
     font-size: 30px;
     letter-spacing: 0.75px;
+
+    @include media-breakpoint-down(sm){
+        font-size: 20px;
+    }
 }
 
 .featured-header>div:first-child {
@@ -336,8 +417,21 @@ body {
     letter-spacing: 0.35px;
 }
 
-.fetured-items {
+.featured_items {
     margin-bottom: 100px;
+    text-align: center;
+    margin-top: 100px;
+    font-weight: 700;
+    font-size: 30px;
+
+
+    div{
+        font-size: 14px;
+        font-weight: 400;
+        color: #9f9f9f;
+        max-width: 350px;
+        margin: 0 auto;
+    }
 }
 
 .line {
@@ -356,7 +450,8 @@ body {
 
 .center {
     width: inherit;
-    height: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     text-align: center;
 }
 
@@ -446,14 +541,14 @@ body {
 }
 
 .offer_block {
-    width: 1140px;
-    margin: 0 auto;
-    position: relative;
+ 
+display:  flex;
+
     margin-bottom: 100px;
 }
 
 .offer_block div {
-    display: inline-block;
+
 }
 
 .img-box {
@@ -470,18 +565,31 @@ body {
 }
 
 .offer {
-    width: 1140px;
-    height: 533px;
-    background-color: #222224;
 
+    background-color: #222224;
+    width: 767px;
     background-image: url(img/girl.jpg);
     background-repeat: no-repeat;
     background-position: left;
+    background-size: cover;
+    padding: 30px;
+    display: flex;
+
+    @media (max-width:777px) {
+        align-items: center;
+        
+    }
 }
 
 .advantages img {
-    display: inline-block;
+    float: left;
+    margin-right: 30px;
 
+
+}
+.offer_desc{
+    float: right;
+    max-width: 220px;
 
 }
 
@@ -491,11 +599,10 @@ body {
 }
 
 .offer_text {
-    width: 330px;
-    margin-top: 140px;
-    margin-left: 40px;
-    text-transform: uppercase;
 
+    display: inline-block;
+    text-transform: uppercase;
+    margin-top: 10%;
     letter-spacing: 1.5px;
 
 }
@@ -507,15 +614,10 @@ body {
     color: white;
 }
 
-.offer_text span:nth-child(2) {
+.offer_text span:last-child {
     font-size: 32px;
     font-weight: 700;
     color: white;
-}
-
-.offer_desc {
-    width: 200px;
-
 }
 
 #pink_offer {
@@ -523,15 +625,13 @@ body {
 }
 
 .advantage_text {
-    width: 220px;
+ 
     font-size: 14px;
     margin-top: 17px;
 }
 
 .advantage {
-    position: relative;
-
-    margin-top: 55px;
+    margin-bottom: 30px;
 
 }
 
@@ -548,9 +648,14 @@ body {
 
 .advantages {
     color: white;
-    width: 294px;
-    position: absolute;
-    right: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color:#222224;
+    padding: 20px;
+
+
+
+
 }
 
 .subscribe_old {
@@ -1406,6 +1511,11 @@ footer {
 
     }
 }
+.galery{
+    display: grid;
+grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+grid-template-rows: repeat(2, 1fr);
+}
 
 .like_also {
     width: 1141px;
@@ -1425,7 +1535,6 @@ footer {
 
     .galery {
         display: flex;
-        justify-content: space-between;
     }
 
     figure {
