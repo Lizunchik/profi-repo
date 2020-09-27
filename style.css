@@ -11265,9 +11265,9 @@ body {
 }
 
 .featured_items {
-  margin-bottom: 100px;
+  margin-bottom: 5%;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 5%;
   font-weight: 700;
   font-size: 30px;
 }
@@ -11298,8 +11298,8 @@ body {
 
 .center {
   width: inherit;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 3%;
+  margin-bottom: 3%;
   text-align: center;
 }
 
@@ -11440,19 +11440,27 @@ body {
   text-transform: uppercase;
   margin-top: 10%;
   letter-spacing: 1.5px;
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+}
+
+@media (max-width: 450px) {
+  .offer_text {
+    font-size: 25px;
+  }
 }
 
 .offer_text span:first-child {
   font-size: 54px;
   letter-spacing: 0.9px;
   font-weight: 700;
-  color: white;
 }
 
-.offer_text span:last-child {
-  font-size: 32px;
-  font-weight: 700;
-  color: white;
+@media (max-width: 450px) {
+  .offer_text span:first-child {
+    font-size: 30px;
+  }
 }
 
 #pink_offer {
@@ -11571,6 +11579,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 767.98px) {
+  .reviews {
+    margin-top: 30px;
+  }
 }
 
 .reviewUnit {
