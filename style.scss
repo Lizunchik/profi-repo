@@ -132,7 +132,8 @@ body {
 .accountBtn img {
     margin-left: 8px;
 }
-.slider-main{
+
+.slider-main {
     background-image: url(img/man.jpg);
     height: 665px;
     background-position: center;
@@ -143,16 +144,17 @@ body {
     font-weight: 900;
     font-size: 40px;
 
-    .message{
+    .message {
         margin-left: 10%;
         border-left: 12px solid $pink_color;
         padding-left: 15px;
         padding-right: 15px;
 
-        span:first-child{
+        span:first-child {
             font-size: 60px;
         }
-        span:last-child{
+
+        span:last-child {
             color: $pink_color;
         }
     }
@@ -252,15 +254,16 @@ body {
     color: #f16d7f;
     letter-spacing: 1px;
 }
-.hot_deal{
+
+.hot_deal {
     display: grid;
-    grid-template-columns: repeat(2,minmax(160px,1fr));
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
     grid-template-rows: repeat(3, 1fr);
 
     gap: 20px;
     margin-top: 100px;
-   
-    &>div{
+
+    &>div {
         background-repeat: no-repeat;
         background-position: center;
         background-color: #dadad2;
@@ -269,36 +272,39 @@ body {
         @media (max-width: 992px) {
             grid-column: auto/auto;
             grid-row: auto/auto;
-            
+
         }
     }
 
-    &>div:first-child{
+    &>div:first-child {
         height: 542px;
         background-image: url(img/card1.jpg);
         grid-column: 1/2;
         grid-row: 1/3;
     }
-    div:nth-child(2){
+
+    div:nth-child(2) {
         height: 261px;
         background-image: url(img/card2.jpg);
         grid-column: 2/3;
         grid-row: 1/2;
     }
-    div:nth-child(3){
+
+    div:nth-child(3) {
         height: 542px;
         background-image: url(img/card3.jpg);
         grid-column: 2/3;
         grid-row: 2/4;
     }
-    div:nth-child(4){
-        height: 261px; 
+
+    div:nth-child(4) {
+        height: 261px;
         background-image: url(img/card4.jpg);
         grid-column: 1/2;
         grid-row: 3/4;
 
     }
-    
+
 }
 
 .required {
@@ -372,17 +378,18 @@ body {
 
 .card_header {
     background-color: white;
-   min-height: 85px;
+    min-height: 85px;
     padding: 16px;
     box-sizing: border-box;
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase;
-  display: inline-block;
-  margin-top: 20px;
-  @include media-breakpoint-down(sm){
-      background-color: rgba(256,256,256,0.8);
-  }
+    display: inline-block;
+    margin-top: 20px;
+
+    @include media-breakpoint-down(sm) {
+        background-color: rgba(256, 256, 256, 0.8);
+    }
 }
 
 .card_header>div {
@@ -390,7 +397,7 @@ body {
     font-size: 30px;
     letter-spacing: 0.75px;
 
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
         font-size: 20px;
     }
 }
@@ -425,7 +432,7 @@ body {
     font-size: 30px;
 
 
-    div{
+    div {
         font-size: 14px;
         font-weight: 400;
         color: #9f9f9f;
@@ -542,15 +549,13 @@ body {
 }
 
 .offer_block {
- 
-display:  flex;
+
+    display: flex;
 
     margin-bottom: 100px;
 }
 
-.offer_block div {
-
-}
+.offer_block div {}
 
 .img-box {
 
@@ -578,7 +583,7 @@ display:  flex;
 
     @media (max-width:777px) {
         align-items: center;
-        
+
     }
 }
 
@@ -588,7 +593,8 @@ display:  flex;
 
 
 }
-.offer_desc{
+
+.offer_desc {
     float: right;
     max-width: 220px;
 
@@ -609,7 +615,7 @@ display:  flex;
     font-weight: 700;
     color: white;
 
-    @media(max-width:450px){
+    @media(max-width:450px) {
         font-size: 25px;
     }
 
@@ -619,7 +625,8 @@ display:  flex;
     font-size: 54px;
     letter-spacing: 0.9px;
     font-weight: 700;
-    @media(max-width:450px){
+
+    @media(max-width:450px) {
         font-size: 30px;
     }
 
@@ -632,7 +639,7 @@ display:  flex;
 }
 
 .advantage_text {
- 
+
     font-size: 14px;
     margin-top: 17px;
 }
@@ -657,7 +664,7 @@ display:  flex;
     color: white;
     display: flex;
     flex-direction: column;
-    background-color:#222224;
+    background-color: #222224;
     padding: 20px;
 
 
@@ -735,7 +742,7 @@ display:  flex;
     align-items: center;
     justify-content: center;
 
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
         margin-top: 30px;
     }
 }
@@ -1522,10 +1529,11 @@ footer {
 
     }
 }
-.galery{
+
+.galery {
     display: grid;
-grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
-grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .like_also {
