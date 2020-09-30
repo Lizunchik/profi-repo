@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header container">
         <div class="container headerInside">
             <div class="logo">
                 BRAN<span>D</span>
@@ -29,7 +29,7 @@
             </button>
         </div>
     </header>
-    <div class="topNav">
+    <div class="topNav container">
         <a href="">Home</a>
         <a href="">Man</a>
         <a href="">Women</a>
@@ -38,123 +38,24 @@
         <a href="">Featured</a>
         <a href="">Hot Deals </a>
     </div>
-    <div class="new_arrivals">
-        <div class="container">
-            <div class="arrivals-header">
-                New Arrivals
+    <div class="container-fluid new_arrivals">
+        <div class="container ">
+            <div class="row">
+                <div class="arrivals-header">
+                    New Arrivals
+                </div>
+                <nav>
+                    <a href="">home</a>/
+                    <a href="">men</a>/
+                    <a href="">New Arrivals</a>
+                </nav>
             </div>
-            <nav>
-                <a href="">home</a>/
-                <a href="">men</a>/
-                <a href="">New Arrivals</a>
-            </nav>
+
 
         </div>
     </div>
     <main>
-        <div class="cart container">
-            <div class="product_details">
-                <span class="cart_header">Product Details</span>
-                <hr>
-                <div class="cart_item">
-                    <img src="img/cart_item1.jpg" alt="cart_item1">
-                    <div>
-                        <div class="product_header">
-                            Mango People T-shirt
-                        </div>
-                        <div class="prod_detail">
-                            Color: <span>Red</span><br>
-                            Size: <span>Xll</span>
-                        </div>
-                    </div>
 
-
-                </div>
-                <hr>
-                <div class="cart_item"> <img src="img/cart_item2.jpg" alt="cart_item1">
-                    <div>
-                        <div class="product_header">
-                            Mango People T-shirt
-                        </div>
-                        <div class="prod_detail">
-                            Color: <span>Red</span><br>
-                            Size: <span>Xll</span>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="cart_item"> <img src="img/cart_item3.jpg" alt="cart_item1">
-                    <div>
-                        <div class="product_header">
-                            Mango People T-shirt
-                        </div>
-                        <div class="prod_detail">
-                            Color: <span>Red</span><br>
-                            Size: <span>Xll</span>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-            </div>
-            <div class="unite_price">
-                <span class="cart_header">unite Price</span>
-                <hr>
-                <div>
-                    $150
-                </div>
-                <hr>
-                <div>
-                    $150
-                </div>
-                <hr>
-                <div>
-                    $150
-                </div>
-                <hr>
-            </div>
-            <div class="quantity">
-                <span class="cart_header">Quantity</span>
-                <hr>
-                <div><input type="number"></div>
-                <hr>
-                <div><input type="number"></div>
-                <hr>
-                <div><input type="number"></div>
-                <hr>
-
-            </div>
-            <div class="shipping">
-                <span class="cart_header">shipping</span>
-                <hr>
-                <div>FREE</div>
-                <hr>
-                <div>FREE</div>
-                <hr>
-                <div>FREE</div>
-                <hr>
-            </div>
-            <div class="subtotal">
-                <span class="cart_header">Subtotal</span>
-                <hr>
-                <div>$300</div>
-                <hr>
-                <div>$300</div>
-                <hr>
-                <div>$300</div>
-                <hr>
-            </div>
-            <div class="action">
-                <span class="cart_header">ACTION</span>
-                <hr>
-                <div><img src="img/x.png" alt="x"></div>
-                <hr>
-                <div><img src="img/x.png" alt="x"></div>
-                <hr>
-                <div><img src="img/x.png" alt="x"></div>
-                <hr>
-
-            </div>
-        </div>
     </main>
     <div class="buttons container">
         <a href="">cLEAR SHOPPING CART</a>
@@ -189,34 +90,40 @@
             <button class="checkoutBtn ">proceed to checkout</button>
         </aside>
     </div>
-    <div class="subscribeWrap">
-        <div class="container subscribe">
-            <div class="reviews">
-                <div class="reviewUnit">
-                    <div class="reviewUnitLeft">
-                        <img src="img/ava.png" alt="">
-                    </div>
-                    <div class="reviewUnitRight">
-                        <blockquote>
-                            “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
-                            a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
-                        </blockquote>
-                        <div class="reviewName">
-                            Bin Burhan
+    <div class="subscribeWrap container-fluid">
+        <div class="row subscribe">
+
+            <div class="reviews col-md-6">
+                <div class="reviewUnit row">
+
+                    <div class="reviewUnitRight col-md-10">
+                        <div>
+                            <img src="img/ava.png" alt="">
                         </div>
-                        <div class="reviewFrom">
-                            Dhaka, Bd
+                        <div class="col-md-10">
+                            <blockquote>
+                                “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                                a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
+                            </blockquote>
+                            <div class="reviewName">
+                                Bin Burhan
+                            </div>
+                            <div class="reviewFrom">
+                                Dhaka, Bd
+                            </div>
+                            <div class="reviewsSwitch">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
                         </div>
-                        <div class="reviewsSwitch">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
+
                     </div>
                 </div>
             </div>
-            <div class="subscribeDivider"></div>
-            <div class="subscribeRight">
+
+            <div class="subscribeRight col-md-6">
+
                 <div class="subscribeRightHead">
                     Subscribe
                 </div>
@@ -224,64 +131,72 @@
                     FOR OUR NEWLETTER AND PROMOTION
                 </div>
                 <form class="subscribeForm" action="">
-                    <input placeholder="Enter Your Email" type="email" pattern="^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$;">
+                    <input placeholder="Enter Your Email" type="email"
+                        pattern="^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$;">
                     <button>Subscribe</button>
                 </form>
+
             </div>
         </div>
     </div>
     <footer class="container">
-        <div class="footerBrand">
-            <div class="logo">
-                BRAN<span>D</span>
+        <div class="row footer-row">
+            <div class="footerBrand col-md-3">
+                <div class="logo">
+                    BRAN<span>D</span>
+                </div>
+                <div class="footerBrandText1">
+                    Objectively transition extensive data rather than cross functional solutions. Monotonectally
+                    syndicate
+                    multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of
+                    processes and cross-unit partnerships.
+                </div>
+                <div class="footerBrandText2">
+                    Efficiently plagiarize 24/365 action items and focused infomediaries.
+                    Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+                </div>
             </div>
-            <div class="footerBrandText1">
-                Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate
-                multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of
-                processes and cross-unit partnerships.
+            <div class="footerColumn col-md-3">
+                <h2>COMPANY</h2>
+                <a href="">Home</a>
+                <a href="">Shop</a>
+                <a href="">About</a>
+                <a href="">How It Works</a>
+                <a href="">Contact</a>
             </div>
-            <div class="footerBrandText2">
-                Efficiently plagiarize 24/365 action items and focused infomediaries.
-                Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+            <div class="footerColumn col-md-3">
+                <h2>INFORMATION</h2>
+                <a href="">Tearms & Condition</a>
+                <a href="">Privacy Policy</a>
+                <a href="">How to Buy</a>
+                <a href="">How to Sell</a>
+                <a href="">Promotion</a>
             </div>
-        </div>
-        <div class="footerColumn">
-            <h2>COMPANY</h2>
-            <a href="">Home</a>
-            <a href="">Shop</a>
-            <a href="">About</a>
-            <a href="">How It Works</a>
-            <a href="">Contact</a>
-        </div>
-        <div class="footerColumn">
-            <h2>INFORMATION</h2>
-            <a href="">Tearms & Condition</a>
-            <a href="">Privacy Policy</a>
-            <a href="">How to Buy</a>
-            <a href="">How to Sell</a>
-            <a href="">Promotion</a>
-        </div>
-        <div class="footerColumn">
-            <h2>SHOP CATEGORY</h2>
-            <a href="">Men</a>
-            <a href="">Women</a>
-            <a href="">Child</a>
-            <a href="">Apparel</a>
-            <a href="">Browse All</a>
+            <div class="footerColumn col-md-3">
+                <h2>SHOP CATEGORY</h2>
+                <a href="">Men</a>
+                <a href="">Women</a>
+                <a href="">Child</a>
+                <a href="">Apparel</a>
+                <a href="">Browse All</a>
+            </div>
         </div>
     </footer>
     <div class="copyrights">
         <div class="container copyrightsWrap">
-            <div class="copyrightsLeft">
-                &copy; 2017 Brand All Rights Reserved.
+            <div class="row" style="width: 100%">
+                <div class="copyrightsLeft col-md-9">
+                    &copy; 2017 Brand All Rights Reserved.
+                </div>
+                <div class="copyrightsRight col-md-3">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a href=""><i class="fab fa-pinterest-p"></i></a>
+                    <a href=""><i class="fab fa-google-plus-g"></i></a>
+                </div>
             </div>
-            <div class="copyrightsRight">
-                <a href=""><i class="fab fa-facebook-f"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                <a href=""><i class="fab fa-pinterest-p"></i></a>
-                <a href=""><i class="fab fa-google-plus-g"></i></a>
-            </div>
+
         </div>
     </div>
 

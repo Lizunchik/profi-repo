@@ -40,66 +40,71 @@
         <a href="">Featured</a>
         <a href="">Hot Deals </a>
     </div>
-    <div class="new_arrivals">
-        <div class="container">
-            <div class="arrivals-header">
-                New Arrivals
+    <div class="container-fluid new_arrivals">
+        <div class="container ">
+            <div class="row">
+                <div class="arrivals-header">
+                    New Arrivals
+                </div>
+                <nav>
+                    <a href="">home</a>/
+                    <a href="">men</a>/
+                    <a href="">New Arrivals</a>
+                </nav>
             </div>
-            <nav>
-                <a href="">home</a>/
-                <a href="">men</a>/
-                <a href="">New Arrivals</a>
-            </nav>
+
 
         </div>
     </div>
     <div class="container product-main">
 
-        <div class="category col-2">
-            <details>
-                <summary> <span>Category</span>
-                    <div></div>
-                </summary>
-                <div class="summ_category">Accessories <br>
-                    Bags <br>
-                    Denim <br>
-                    Hoodies & Sweatshirts <br>
-                    Jackets & Coats <br>
-                    Pants <br>
-                    Polos <br>
-                    Shirts <br>
-                    Shoes <br>
-                    Shorts <br>
-                    Sweaters & Knits <br>
-                    T-Shirts <br>
-                    Tanks</div>
-            </details>
-            <details>
-                <summary>BRAND <div></div>
-                </summary>
-                <p>пыщ пыщ ололо</p>
-            </details>
-            <details>
-                <summary>dESIGNER <div></div>
-                </summary>
-                <p>я водитель нло</p>
-            </details>
-        </div>
+            <div class="category">
+                <details>
+                    <summary> <span>Category</span>
+                        <div></div>
+                    </summary>
+                    <div class="summ_category">Accessories <br>
+                        Bags <br>
+                        Denim <br>
+                        Hoodies & Sweatshirts <br>
+                        Jackets & Coats <br>
+                        Pants <br>
+                        Polos <br>
+                        Shirts <br>
+                        Shoes <br>
+                        Shorts <br>
+                        Sweaters & Knits <br>
+                        T-Shirts <br>
+                        Tanks</div>
+                </details>
+                <details>
+                    <summary>BRAND <div></div>
+                    </summary>
+                    <p>пыщ пыщ ололо</p>
+                </details>
+                <details>
+                    <summary>dESIGNER <div></div>
+                    </summary>
+                    <p>я водитель нло</p>
+                </details>
+            </div>
 
-        <div class="row lol col-10">
-            <div class="row choice">
-                <div class="col-4"> <span>Trending now</span>
+        
+
+        <div class="lol">
+            <div class="choice">
+                <div> <span>Trending now</span>
                     <div>
-                        <div>Bohemian</div>
-                        <div>Floral</div>
-                        <div>Lace</div>
-                        <div>Floral</div>
-                        <div>Lace</div>
-                        <div>Bohemian</div>
+                        <div>Bohemian |</div>
+                        <div>Floral |</div>
+                        <div>Lace |</div>
+                        <div>Floral |</div>
+                        <div>Lace |</div>
+                        <div>Bohemian |</div>
                     </div>
                 </div>
-                <div class="col-4"><span>Size</span>
-                    <div>
+                <div><span>Size</span>
+                    <div class="sizes">
                         <input type="checkbox" id="xxs">
                         <label for="xxs">XXS</label>
                         <input type="checkbox" id="xs">
@@ -108,8 +113,8 @@
                         <label for="xxs">S</label>
                         <input type="checkbox" id="m">
                         <label for="xs">M</label> <br>
-
-
+    
+    
                         <input type="checkbox" id="l">
                         <label for="l">L</label>
                         <input type="checkbox" id="xl">
@@ -117,36 +122,41 @@
                         <input type="checkbox" id="xxl">
                         <label for="xxl">XXL</label>
                     </div>
-
+    
                 </div>
-                <div class="col-4"><span>pRICE</span>
+                <div><span>pRICE</span>
                     <div> <input type="range" min="0" max="100" step="1" value="50" id="price"> </div>
                 </div>
             </div>
 
-            <div class="row sort">
+            <div class="sort">
                 <div class="sort_by">
                     <div>
                         <div class="label">Sort By</div>
-                        <select>
-                            <option value="" hidden disabled selected>Выбрать</option>
-                            <option>Name</option>
-                            <option>Date</option>
-                        </select>
-                        <div class="label">Show</div>
-                        <select>
-                            <option value="" hidden disabled selected>Выбрать</option>
-                            <option>09</option>
-                            <option>08</option>
-                        </select>
+                            <select>
+                                <option value="" hidden disabled selected>Выбрать</option>
+                                <option>Name</option>
+                                <option>Date</option>
+                            </select>
                     </div>
+
+                        <div>
+                            <div class="label">Show</div>
+                            <select>
+                                <option value="" hidden disabled selected>Выбрать</option>
+                                <option>09</option>
+                                <option>08</option>
+                            </select>
+                        </div>
 
                 </div>
             </div>
-            <div class="row row-picture">
-                <div class="col-4"><img src="img/boot1.png" alt="boot1">
+            <div class="row-picture">
+                <div><img src="img/boot1.png" alt="boot1">
+                   <div class="picture-desc">
                     <div>Mango People T-shirt</div>
                     <div>$52.00</div>
+                   </div> 
                     <div class="boot-shadow">
                         <div>
                             <div>Add to Cart</div>
@@ -155,9 +165,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4"><img src="img/boot2.png" alt="boot1">
-                    <div>Mango People T-shirt</div>
-                    <div>$52.00</div>
+                <div><img src="img/boot2.png" alt="boot1">
+                    <div class="picture-desc">
+                        <div>Mango People T-shirt</div>
+                        <div>$52.00</div>
+                       </div> 
                     <div class="boot-shadow">
                         <div>
                             <div>Add to Cart</div>
@@ -166,9 +178,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4"><img src="img/boot3.png" alt="boot1">
-                    <div>Mango People T-shirt</div>
-                    <div>$52.00</div>
+                <div><img src="img/boot3.png" alt="boot1">
+                    <div class="picture-desc">
+                        <div>Mango People T-shirt</div>
+                        <div>$52.00</div>
+                       </div> 
                     <div class="boot-shadow">
                         <div>
                             <div>Add to Cart</div>
@@ -177,11 +191,13 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row row-picture">
-                <div class="col-4"><img src="img/boot2.png" alt="boot1">
-                    <div>Mango People T-shirt</div>
-                    <div>$52.00</div>
+
+
+                <div><img src="img/boot2.png" alt="boot1">
+                    <div class="picture-desc">
+                        <div>Mango People T-shirt</div>
+                        <div>$52.00</div>
+                       </div> 
                     <div class="boot-shadow">
                         <div>
                             <div>Add to Cart</div>
@@ -190,9 +206,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4"><img src="img/boot1.png" alt="boot1">
-                    <div>Mango People T-shirt</div>
-                    <div>$52.00</div>
+                <div><img src="img/boot1.png" alt="boot1">
+                    <div class="picture-desc">
+                        <div>Mango People T-shirt</div>
+                        <div>$52.00</div>
+                       </div> 
                     <div class="boot-shadow">
                         <div>
                             <div>Add to Cart</div>
@@ -201,9 +219,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4"><img src="img/boot1.png" alt="boot1">
-                    <div>Mango People T-shirt</div>
-                    <div>$52.00</div>
+                <div><img src="img/boot1.png" alt="boot1">
+                    <div class="picture-desc">
+                        <div>Mango People T-shirt</div>
+                        <div>$52.00</div>
+                       </div> 
                     <div class="boot-shadow">
                         <div>
                             <div>Add to Cart</div>
@@ -212,11 +232,13 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row row-picture">
-                <div class="col-4"><img src="img/boot1.png" alt="boot1">
-                    <div>Mango People T-shirt</div>
-                    <div>$52.00</div>
+
+
+                <div><img src="img/boot1.png" alt="boot1">
+                    <div class="picture-desc">
+                        <div>Mango People T-shirt</div>
+                        <div>$52.00</div>
+                       </div> 
                     <div class="boot-shadow">
                         <div>
                             <div>Add to Cart</div>
@@ -225,9 +247,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4"><img src="img/boot1.png" alt="boot1">
-                    <div>Mango People T-shirt</div>
-                    <div>$52.00</div>
+                <div><img src="img/boot1.png" alt="boot1">
+                    <div class="picture-desc">
+                        <div>Mango People T-shirt</div>
+                        <div>$52.00</div>
+                       </div> 
                     <div class="boot-shadow">
                         <div>
                             <div>Add to Cart</div>
@@ -236,9 +260,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4"><img src="img/boot1.png" alt="boot1">
-                    <div>Mango People T-shirt</div>
-                    <div>$52.00</div>
+                <div><img src="img/boot1.png" alt="boot1">
+                    <div class="picture-desc">
+                        <div>Mango People T-shirt</div>
+                        <div>$52.00</div>
+                       </div> 
                     <div class="boot-shadow">
                         <div>
                             <div>Add to Cart</div>
@@ -249,7 +275,7 @@
                 </div>
             </div>
 
-            <div class="row buttons">
+            <div class="buttons">
                 <div class="pagesBtn"> <img src="img/grey-arrow-left.png" alt="grey-arrow-left" id="left"> 1
                     &nbsp;2&nbsp; 3&nbsp; 4&nbsp; 5&nbsp; 6&nbsp;.....&nbsp;20&nbsp;
                     <img src="img/pink-arrow-right.png" alt="pink-arrow-right" id="right">
@@ -261,57 +287,78 @@
 
 
     </div>
-    <div class="container-fluid advantages-product">
-        <div>
-            <div>
-                <img src="img/car.png" alt="car"> <br>
-                <span>Free Delivery</span>
-                <div>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
-                </div>
+
+<div class="advantages-container">
+
+    <div class="advantages">
+
+        <div class="advantage">
+            <img src="img/offer_icon1.svg" alt="offer_icon1">
+            <div class="offer_desc">
+                <div class="advantage-header">Free Delivery</div>
+                <div class="advantage_text">Worldwide delivery on all. Authorit tively morph next-generation innov
+                    tion with extensive models.</div>
             </div>
-            <div>
-                <img src="img/procent.png" alt="car"> <br>
-                <span>Sales & discounts</span>
-                <div>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
-                </div>
-            </div>
-            <div>
-                <img src="img/crown.png" alt="car"> <br>
-                <span>Quality assurance</span>
-                <div>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
-                </div>
+    
+        </div>
+        <div class="advantage">
+            <img src="img/offer_icon2.svg" alt="offer_icon1">
+            <div class="offer_desc">
+                <div class="advantage-header">Sales & discounts</div>
+                <div class="advantage_text">Worldwide delivery on all. Authorit tively morph next-generation innov
+                    tion with extensive models.</div>
             </div>
         </div>
+        <div class="advantage">
+            <img src="img/offer_icon3.svg" alt="offer_icon1">
+            <div class="offer_desc">
+                <div class="advantage-header">Quality assurance</div>
+                <div class="advantage_text">Worldwide delivery on all. Authorit tively morph next-generation innov
+                    tion with extensive models.</div>
+            </div>
+    
+        </div>
+    
+    
+        </div>
 
-    </div>
-    <div class="subscribeWrap">
-        <div class="container subscribe">
-            <div class="reviews">
-                <div class="reviewUnit">
-                    <div class="reviewUnitLeft">
-                        <img src="img/ava.png" alt="">
-                    </div>
-                    <div class="reviewUnitRight">
-                        <blockquote>
-                            “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
-                            a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
-                        </blockquote>
-                        <div class="reviewName">
-                            Bin Burhan
+</div>
+
+
+    <div class="subscribeWrap container-fluid">
+        <div class="row subscribe">
+
+            <div class="reviews col-md-6">
+                <div class="reviewUnit row">
+
+                    <div class="reviewUnitRight col-md-10">
+                        <div>
+                            <img src="img/ava.png" alt="">
                         </div>
-                        <div class="reviewFrom">
-                            Dhaka, Bd
+                        <div class="col-md-10">
+                            <blockquote>
+                                “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                                a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
+                            </blockquote>
+                            <div class="reviewName">
+                                Bin Burhan
+                            </div>
+                            <div class="reviewFrom">
+                                Dhaka, Bd
+                            </div>
+                            <div class="reviewsSwitch">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
                         </div>
-                        <div class="reviewsSwitch">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
+
                     </div>
                 </div>
             </div>
-            <div class="subscribeDivider"></div>
-            <div class="subscribeRight">
+
+            <div class="subscribeRight col-md-6">
+
                 <div class="subscribeRightHead">
                     Subscribe
                 </div>
@@ -323,61 +370,68 @@
                         pattern="^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$;">
                     <button>Subscribe</button>
                 </form>
+
             </div>
         </div>
     </div>
     <footer class="container">
-        <div class="footerBrand">
-            <div class="logo">
-                BRAN<span>D</span>
+        <div class="row footer-row">
+            <div class="footerBrand col-md-3">
+                <div class="logo">
+                    BRAN<span>D</span>
+                </div>
+                <div class="footerBrandText1">
+                    Objectively transition extensive data rather than cross functional solutions. Monotonectally
+                    syndicate
+                    multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of
+                    processes and cross-unit partnerships.
+                </div>
+                <div class="footerBrandText2">
+                    Efficiently plagiarize 24/365 action items and focused infomediaries.
+                    Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+                </div>
             </div>
-            <div class="footerBrandText1">
-                Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate
-                multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of
-                processes and cross-unit partnerships.
+            <div class="footerColumn col-md-3">
+                <h2>COMPANY</h2>
+                <a href="">Home</a>
+                <a href="">Shop</a>
+                <a href="">About</a>
+                <a href="">How It Works</a>
+                <a href="">Contact</a>
             </div>
-            <div class="footerBrandText2">
-                Efficiently plagiarize 24/365 action items and focused infomediaries.
-                Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+            <div class="footerColumn col-md-3">
+                <h2>INFORMATION</h2>
+                <a href="">Tearms & Condition</a>
+                <a href="">Privacy Policy</a>
+                <a href="">How to Buy</a>
+                <a href="">How to Sell</a>
+                <a href="">Promotion</a>
             </div>
-        </div>
-        <div class="footerColumn">
-            <h2>COMPANY</h2>
-            <a href="">Home</a>
-            <a href="">Shop</a>
-            <a href="">About</a>
-            <a href="">How It Works</a>
-            <a href="">Contact</a>
-        </div>
-        <div class="footerColumn">
-            <h2>INFORMATION</h2>
-            <a href="">Tearms & Condition</a>
-            <a href="">Privacy Policy</a>
-            <a href="">How to Buy</a>
-            <a href="">How to Sell</a>
-            <a href="">Promotion</a>
-        </div>
-        <div class="footerColumn">
-            <h2>SHOP CATEGORY</h2>
-            <a href="">Men</a>
-            <a href="">Women</a>
-            <a href="">Child</a>
-            <a href="">Apparel</a>
-            <a href="">Browse All</a>
+            <div class="footerColumn col-md-3">
+                <h2>SHOP CATEGORY</h2>
+                <a href="">Men</a>
+                <a href="">Women</a>
+                <a href="">Child</a>
+                <a href="">Apparel</a>
+                <a href="">Browse All</a>
+            </div>
         </div>
     </footer>
     <div class="copyrights">
         <div class="container copyrightsWrap">
-            <div class="copyrightsLeft">
-                &copy; 2017 Brand All Rights Reserved.
+            <div class="row" style="width: 100%">
+                <div class="copyrightsLeft col-md-9">
+                    &copy; 2017 Brand All Rights Reserved.
+                </div>
+                <div class="copyrightsRight col-md-3">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a href=""><i class="fab fa-pinterest-p"></i></a>
+                    <a href=""><i class="fab fa-google-plus-g"></i></a>
+                </div>
             </div>
-            <div class="copyrightsRight">
-                <a href=""><i class="fab fa-facebook-f"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                <a href=""><i class="fab fa-pinterest-p"></i></a>
-                <a href=""><i class="fab fa-google-plus-g"></i></a>
-            </div>
+
         </div>
     </div>
 
