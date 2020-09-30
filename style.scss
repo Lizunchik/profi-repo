@@ -583,6 +583,48 @@ body {
     position: absolute;
     top: 0;
 }
+.advantages-container{
+    width: 100%;
+   min-height: 340px;
+    background-color: #222224;
+    display: flex;
+    align-items: center;
+    .offer_desc{
+        max-width: 100%;
+        text-align: center;
+        @media (min-width:1000px){
+            margin-top: 30px;
+        }
+
+        .advantage_text{
+            @media (min-width:1000px){
+            width: 300px;
+            }
+        }
+    }
+    .advantages{
+
+        max-width: 1100px;
+        margin: 0 auto;
+        @media (min-width:1200px) {
+            width: 90%;
+        }
+        
+.advantage{
+    @media (min-width:1200px) {
+        display: flex;
+        flex-direction: column;
+      
+    }
+
+}
+
+        @media (min-width:1200px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
 
 .offer {
 
@@ -616,6 +658,7 @@ body {
 .offer_desc {
     float: right;
     max-width: 220px;
+    padding-left: 10px;
 
 }
 
@@ -687,8 +730,10 @@ body {
     background-color: #222224;
     padding: 20px;
 
+
     @media (max-width:1200px) {
         flex-direction: row;
+      justify-content: space-between;
         width: 100%;
     }
 
@@ -1435,6 +1480,10 @@ footer {
     justify-content: center;
     align-items: center;
 
+    @media (min-width:1150px){
+        width: 1100px;
+    }
+
     .content {
 
         text-align: center;
@@ -1607,6 +1656,7 @@ footer {
 .like_also {
 
     margin: 0 auto;
+    max-width: 1100px;
 
 
     .like_also_header {
@@ -1670,6 +1720,7 @@ footer {
     .summ_category {
         margin-bottom: 30px;
         line-height: 2;
+       
     }
 
     details summary::-webkit-details-marker {
@@ -1715,11 +1766,23 @@ footer {
 .product-main {
     margin-top: 60px;
     color: #6f6e6e;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width:490px){
+      flex-wrap: nowrap;
+    }
 
     .category {
         width: 30%;
-        min-width: 130px;
+        min-width: 110px;
         margin-right: 10px;
+      
+        margin-right: 20px;
+    }
+    
+    >div {
+        display: inline-block;
     }
 }
 
@@ -1729,16 +1792,31 @@ footer {
         display: block;
     }
 
-    div {
-        display: inline-block;
-    }
 
     .choice {
-        height: 100px;
 
-        width: 60%;
-
-        .col-4 {
+        display: flex;
+        flex-direction: column;
+    
+        @media (min-width:500px){
+            display: flex;
+            justify-content: space-between;
+   
+        }
+        @media (min-width:760px){
+            flex-direction: row;
+        }
+        .sizes{
+            min-width: 210px;
+        }
+        >div:first-child div{
+            display: inline-block;
+        }
+        >div {
+           margin-bottom: 20px;
+           display: inline-block;
+           max-width: 240px;
+           padding: 10px;
             span {
                 font-weight: 700;
                 text-transform: uppercase;
@@ -1749,6 +1827,9 @@ footer {
                 margin-right: 10px;
                 margin-left: 5px;
             }
+
+  
+
         }
 
         .col-4>div:first-child {
@@ -1778,12 +1859,13 @@ footer {
 
     .sort {
         background-color: #f3f3f3;
-        margin-top: 50px;
+     
         margin-bottom: 50px;
         display: flex;
         align-items: center;
         padding-left: 10px;
         width: 100%;
+        min-height: 50px;
 
     }
 
@@ -1796,13 +1878,31 @@ footer {
         width: 100%;
         display: grid;
         gap: 20px;
+        >div:hover .boot-shadow {
+            display: flex;
+        }
 
+        @media (min-width:770px){
+            grid-template-columns: repeat(2,1fr);
+        }
+        @media (min-width:1100px){
+            grid-template-columns: repeat(3,1fr);
+        }
+        .picture-desc{
+            padding: 15px;
+            >div:last-child {
+                color: #f16d7f;
+                font-weight: 700;
+            }
+        }
+
+       
         .boot-shadow {
             display: none;
-            width: inherit;
+            width:280px;
             background-color: rgba(0, 0, 0, 0.5);
             position: absolute;
-            height: 280px;
+            height: 290px;
             top: 0;
             left: 0;
             text-align: center;
@@ -1814,6 +1914,7 @@ footer {
                 width: 160px;
                 color: #ffffff;
                 font-size: 13px;
+               
 
                 & div:nth-child(1) {
                     height: 40px;
@@ -1823,6 +1924,9 @@ footer {
                     background-image: url(img/w-cart.png);
                     background-repeat: no-repeat;
                     background-position: 10px 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
 
                 & div:nth-child(2) {
@@ -1850,32 +1954,39 @@ footer {
 
         }
 
-        .col-4 {
-            &:hover .boot-shadow {
-                display: flex;
-            }
+        >div {
+            position: relative;
+
 
             &>div:not(.boot-shadow) {
                 text-transform: uppercase;
             }
         }
 
-        .col-4 div {
+        >div {
             padding: 10px;
 
             box-sizing: border-box;
         }
 
-        .col-4 div:nth-child(3) {
-            color: #f16d7f;
-            font-weight: 700;
-        }
+
 
     }
 
     .buttons {
-        height: 50px;
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 90%;
+        justify-content: center;
+        margin-bottom: 100px;
+        @media (min-width:790px){
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        div{
+            margin-top: 20px;
+        }
 
     }
 }
@@ -1890,6 +2001,8 @@ footer {
     color: #fbfbfb;
     margin-bottom: -100px;
     margin-top: 100px;
+
+
 
     &>div {
         display: flex;
@@ -1951,9 +2064,11 @@ footer {
 
 .sort_by {
 
-
+    display: flex;
+    flex-wrap: wrap;
     .label {
-
+display: inline-block;
+width: 120px;
         height: 30px;
         padding-left: 10px;
         border: 1px solid #ebebeb;
@@ -1968,6 +2083,8 @@ footer {
 
     padding: 1px 20px 2px 7px;
     box-sizing: border-box;
+
+    height: 30px;
 
 }
 
