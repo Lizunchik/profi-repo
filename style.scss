@@ -70,11 +70,16 @@ body {
     background-color: #f16d7f;
     color: white;
     border: none;
+    transition-duration: 1s;
 
     @include media-breakpoint-down(md) {
         margin-bottom: 10px;
     }
 
+}
+.accountBtn:hover{
+    background-color: lightcoral;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .brouseBtn {
@@ -87,7 +92,12 @@ body {
     font-size: 16px;
     font-weight: 700;
     margin: 0 auto;
+    transition-duration: 1s;
 
+}
+.brouseBtn:hover{
+    background-color: lightcoral;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .shadowBtn {
@@ -611,11 +621,15 @@ body {
         max-width: 1100px;
         margin: 0 auto;
 
+
         @media (min-width:1200px) {
             width: 90%;
         }
 
         .advantage {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
             @media (min-width:1200px) {
                 display: flex;
                 flex-direction: column;
@@ -653,9 +667,13 @@ body {
 }
 
 .advantages img {
-    float: left;
+ 
     margin-right: 30px;
     height: 35px;
+
+   &:hover{
+       transform: scale(1.2,1.2);
+   }
 
 
 }
@@ -714,6 +732,7 @@ body {
 
 .advantage {
     margin-bottom: 30px;
+
 
 }
 
@@ -1447,6 +1466,9 @@ footer {
     text-decoration: none;
     color: inherit;
 }
+.copyrightsRight a:hover{
+    transform: scale(1.2,1.2);
+}
 
 .copyrightsRight i {
     width: 32px;
@@ -1633,6 +1655,15 @@ footer {
             color: #ef5b70;
             font-size: 16px;
             font-weight: 700;
+            transition-duration: 1s;
+            transform: scale(1.3,1.3);
+
+            &:hover{
+                background-color: wheat;
+               
+                box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+            }
 
             @media (min-width:590px) {
                 width: 537px;
@@ -1698,11 +1729,16 @@ footer {
 
         div {
             margin: 0 auto;
+            transition-duration: 1s;
 
             img {
                 width: 261px;
                 height: 280px;
                 object-fit: contain;
+                
+                &:hover{
+                    transform: perspective(400px) rotateY(20deg);
+                }
             }
 
             &>div {
@@ -2075,9 +2111,13 @@ footer {
     align-items: center;
     justify-content: center;
     color: #ef5b70;
+    transition-duration: 1s;
 
 }
-
+.viewBtn:hover{
+    background-color: moccasin;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
 .sort_by {
 
     display: flex;
@@ -2151,8 +2191,13 @@ footer {
                 width: 180px;
 
                 background-color: #ffffff;
-
+                transition-duration: 1s;
                 font-weight: 700;
+
+                &:hover{
+                    background-color:pink;
+                    border-radius: 8px;
+                }
             }
 
             input[type=password] {

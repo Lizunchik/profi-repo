@@ -10883,12 +10883,20 @@ body {
   background-color: #f16d7f;
   color: white;
   border: none;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 @media (max-width: 991.98px) {
   .accountBtn {
     margin-bottom: 10px;
   }
+}
+
+.accountBtn:hover {
+  background-color: lightcoral;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .brouseBtn {
@@ -10901,6 +10909,14 @@ body {
   font-size: 16px;
   font-weight: 700;
   margin: 0 auto;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.brouseBtn:hover {
+  background-color: lightcoral;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .shadowBtn {
@@ -11460,6 +11476,19 @@ body {
   }
 }
 
+.advantages-container .advantages .advantage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 @media (min-width: 1200px) {
   .advantages-container .advantages .advantage {
     display: -webkit-box;
@@ -11512,9 +11541,13 @@ body {
 }
 
 .advantages img {
-  float: left;
   margin-right: 30px;
   height: 35px;
+}
+
+.advantages img:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
 }
 
 .offer_desc {
@@ -12384,6 +12417,11 @@ footer {
   color: inherit;
 }
 
+.copyrightsRight a:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
 .copyrightsRight i {
   width: 32px;
   height: 32px;
@@ -12610,6 +12648,16 @@ footer {
   color: #ef5b70;
   font-size: 16px;
   font-weight: 700;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3);
+}
+
+.card .content article .addToCart:hover {
+  background-color: wheat;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 590px) {
@@ -12682,6 +12730,8 @@ footer {
 
 .like_also .galery div {
   margin: 0 auto;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .like_also .galery div img {
@@ -12689,6 +12739,11 @@ footer {
   height: 280px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.like_also .galery div img:hover {
+  -webkit-transform: perspective(400px) rotateY(20deg);
+          transform: perspective(400px) rotateY(20deg);
 }
 
 .like_also .galery div > div {
@@ -13104,6 +13159,14 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   color: #ef5b70;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.viewBtn:hover {
+  background-color: moccasin;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .sort_by {
@@ -13184,7 +13247,14 @@ footer {
   margin-bottom: 15px;
   width: 180px;
   background-color: #ffffff;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
   font-weight: 700;
+}
+
+.shipping_adress .register-card form input[type=submit]:hover {
+  background-color: pink;
+  border-radius: 8px;
 }
 
 .shipping_adress .register-card form input[type=password] {
