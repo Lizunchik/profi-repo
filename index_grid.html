@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="header container">
+    <header class="header container-fluid">
         <div class="container headerInside">
             <div class="logo">
                 BRAN<span>D</span>
@@ -25,11 +25,44 @@
                     <img src="img/lupa.png" alt="lupa">
                 </button>
             </form>
-            <img class="headerCart" src="img/cart.svg" alt="">
-            <button class="accountBtn">
-                My Account<img src="img/white-arrow.png" alt="arrow">
-            </button>
-        </div>
+            <div class="headerInside_right">
+                <div class="headerCart">
+                    <img src="img/cart.svg" alt="">
+                    <div id="cart-card">
+                        <div id="cart-card-products">
+
+                        </div>
+                      <!--  <div class="product-card">
+                            <img src="img/mini1.png" alt="mini">
+                            <div class="cart-product-info">
+                                <span>Rebox Zane</span>  <br>
+                                <img src="img/stars.png" alt="stars"> <br>
+                                <span>1 x $250</span> 
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="img/mini1.png" alt="mini">
+                            <div class="cart-product-info">
+                                <span>Rebox Zane</span>  <br>
+                                <img src="img/stars.png" alt="stars"> <br>
+                                <span>1 x $250</span> 
+                            </div>
+                        </div>-->
+                        <div class="total-cart">
+                            <div>Total</div>
+                            <div>$500.00</div>
+                        </div>
+                        <div class="bottom-cart">
+                            <a href="">Checkout</a>
+                            <a href="">Go to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="accountBtn">
+                    My Account<img src="img/white-arrow.png" alt="arrow">
+                </button>
+            </div>
     </header>
     <div class="topNav container">
         <a href="">Home</a>
@@ -77,8 +110,9 @@
         Fetured Items
         <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </div>
     </div>
-    <div class="galery-main container">
-        <div class="product" id="p1">
+    <div class="galery-main container" id="catalog">
+        <!--   <div class="product" id="p1">
+            <img src="img/p1.jpg" alt="p1">
             <div class="shadow">
                 <button class="shadowBtn">
                     <img src="img/w_cart.png" alt="cart"> <span>Add to Cart</span>
@@ -87,77 +121,9 @@
             <div class="product-desc">Mango People T-shirt
                 <div class="price">$52.00</div>
             </div>
-        </div>
-        <div class="product" id="p2">
-            <div class="shadow">
-                <button class="shadowBtn">
-                    <img src="img/w_cart.png" alt="cart"> <span>Add to Cart</span>
-                </button>
-            </div>
-            <div class="product-desc">Mango People T-shirt
-                <div class="price">$52.00</div>
-            </div>
-        </div>
-        <div class="product" id="p3">
-            <div class="shadow">
-                <button class="shadowBtn">
-                    <img src="img/w_cart.png" alt="cart"> <span>Add to Cart</span>
-                </button>
-            </div>
-            <div class="product-desc">Mango People T-shirt
-                <div class="price">$52.00</div>
-            </div>
-        </div>
-        <div class="product" id="p4">
-            <div class="shadow">
-                <button class="shadowBtn">
-                    <img src="img/w_cart.png" alt="cart"> <span>Add to Cart</span>
-                </button>
-            </div>
-            <div class="product-desc">Mango People T-shirt
-                <div class="price">$52.00</div>
-            </div>
-        </div>
-        <div class="product" id="p5">
-            <div class="shadow">
-                <button class="shadowBtn">
-                    <img src="img/w_cart.png" alt="cart"> <span>Add to Cart</span>
-                </button>
-            </div>
-            <div class="product-desc">Mango People T-shirt
-                <div class="price">$52.00</div>
-            </div>
-        </div>
-        <div class="product" id="p6">
-            <div class="shadow">
-                <button class="shadowBtn">
-                    <img src="img/w_cart.png" alt="cart"> <span>Add to Cart</span>
-                </button>
-            </div>
-            <div class="product-desc">Mango People T-shirt
-                <div class="price">$52.00</div>
-            </div>
-        </div>
-        <div class="product" id="p7">
-            <div class="shadow">
-                <button class="shadowBtn">
-                    <img src="img/w_cart.png" alt="cart"> <span>Add to Cart</span>
-                </button>
-            </div>
-            <div class="product-desc">Mango People T-shirt
-                <div class="price">$52.00</div>
-            </div>
-        </div>
-        <div class="product" id="p8">
-            <div class="shadow">
-                <button class="shadowBtn">
-                    <img src="img/w_cart.png" alt="cart"> <span>Add to Cart</span>
-                </button>
-            </div>
-            <div class="product-desc">Mango People T-shirt
-                <div class="price">$52.00</div>
-            </div>
-        </div>
+        </div>-->
+
+
     </div>
     <div class="container center">
         <button class="brouseBtn">Browse All Product <img src="img/arrow-right.png" alt="arrow-right"></button>
@@ -309,6 +275,8 @@
 
         </div>
     </div>
+
+    <script src="src/catalog.js"></script>
 
 </body>
 
