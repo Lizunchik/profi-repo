@@ -65,7 +65,7 @@ function initBasket() {
                 if (event.target.offsetParent.id != 'cart-card' && event.target.name != 'cart') {
                     this.wrapper.style.display='none';
                 }
-                if (event.target.id =='remove'){
+                if (event.target.className =='remove'){
 
                     let id = event.target.dataset.id; //from data-id
                     let item = this.items.find(el => el.productId == id);
@@ -116,7 +116,7 @@ function renderBasketTemplate(item, i) {
             <img src="../src/assets/images/stars.png" alt="stars"> <br>
             <span>${item.productAmount} x $${item.productPrice}</span> 
         </div>
-        <div id ='remove'
+        <div class ='remove'
         data-id="${item.productId}"
         >X</div>
     </div>
