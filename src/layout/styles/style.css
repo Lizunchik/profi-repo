@@ -10873,6 +10873,10 @@ body {
   display: inline-block;
 }
 
+.headerInside .headerInside_right #cart-card .product-card img {
+  width: 100px;
+}
+
 .headerInside .headerInside_right #cart-card .product-card .cart-product-info {
   padding: 15px;
 }
@@ -11023,7 +11027,7 @@ body {
 }
 
 .slider-main {
-  background-image: url(../../assets/images/man.jpg);
+  background-image: url(https://raw.githubusercontent.com/Lizunchik/static/main/man.jpg);
   height: 665px;
   background-position: center;
   background-repeat: no-repeat;
@@ -11170,7 +11174,7 @@ body {
 
 .hot_deal > div:first-child {
   height: 542px;
-  background-image: url(../../assets/images/card1.jpg);
+  background-image: url(https://raw.githubusercontent.com/Lizunchik/static/main/card1.jpg);
   background-position: right;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -11182,7 +11186,7 @@ body {
 
 .hot_deal div:nth-child(2) {
   height: 261px;
-  background-image: url(../../assets/images/card2.jpg);
+  background-image: url(https://raw.githubusercontent.com/Lizunchik/static/main/card2.jpg);
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -11193,7 +11197,7 @@ body {
 
 .hot_deal div:nth-child(3) {
   height: 542px;
-  background-image: url(../../assets/images/card3.jpg);
+  background-image: url(https://raw.githubusercontent.com/Lizunchik/static/main/card3.jpg);
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -11204,7 +11208,7 @@ body {
 
 .hot_deal div:nth-child(4) {
   height: 261px;
-  background-image: url(../../assets/images/card4.jpg);
+  background-image: url(https://raw.githubusercontent.com/Lizunchik/static/main/card4.jpg);
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -11597,7 +11601,7 @@ body {
 .offer {
   background-color: #222224;
   width: 767px;
-  background-image: url(../../assets/images/girl.jpg);
+  background-image: url(https://raw.githubusercontent.com/Lizunchik/static/main/girl.jpg);
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
@@ -11730,7 +11734,7 @@ body {
 .subscribe_old {
   width: 1618px;
   height: 440px;
-  background-image: url(../../assets/images/man.jpg);
+  background-image: url(https://raw.githubusercontent.com/Lizunchik/static/main/man.jpg);
   background-repeat: no-repeat;
   position: relative;
   margin: 0 auto;
@@ -11744,7 +11748,7 @@ body {
 .subscribeWrap {
   margin-top: 100px;
   min-height: 438px;
-  background: url(../../assets/images/subscribe.jpg) no-repeat center bottom, #ccc;
+  background: url(https://raw.githubusercontent.com/Lizunchik/static/main/subscribe.jpg) no-repeat center bottom, #ccc;
   background-blend-mode: overlay;
   background-size: cover;
   display: -webkit-box;
@@ -12532,7 +12536,7 @@ footer {
   border: 1px solid #eaeaea;
   background-color: #f7f7f7;
   height: 777px;
-  background-image: url(../src/assets/images/single_page/girl.jpg);
+  background-image: url(https://raw.githubusercontent.com/Lizunchik/static/main/girl.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -13074,7 +13078,7 @@ footer {
   border-radius: 3px;
   border: 1px solid #ffffff;
   margin-bottom: 10px;
-  background-image: url(../../assets/images/man.jpg);
+  background-image: url(https://raw.githubusercontent.com/Lizunchik/static/main/man.jpg);
   background-repeat: no-repeat;
   background-position: 10px 10px;
   display: -webkit-box;
@@ -13091,7 +13095,7 @@ footer {
 .container .row-picture .boot-shadow > div div:nth-child(2) {
   display: inline-block;
   height: 40px;
-  background-image: url(../../assets/images/man.jpg);
+  background-image: url(https://raw.githubusercontent.com/Lizunchik/static/main/man.jpg);
   background-position: center;
   background-repeat: no-repeat;
   width: 49%;

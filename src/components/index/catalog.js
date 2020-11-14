@@ -1,26 +1,22 @@
 function initCatalog() {
-let TITLES = [
-    'MANGO PEOPLE T-SHIRT',
-    'BANANA PEOPLE T-SHIRT',
-    'POTATO PEOPLE T-SHIRT',
-    'CUCUMBER PEOPLE T-SHIRT',
-    'PEPPER PEOPLE T-SHIRT',
-    'GOROKCH PEOPLE T-SHIRT',
-    'ORANGE PEOPLE T-SHIRT',
-    'KIWI PEOPLE T-SHIRT'
-];
-let PRICES = [52, 68, 36.1, 700, 87, 50, 67.5, 120.03];
-
 const catalog = {
     items: [],
     container: null,
     basket: null,
+    url: 'https://raw.githubusercontent.com/Lizunchik/static/main/catalog.json',
     init(basket) {
         this.container = document.querySelector('#catalog');
-        this.items = getCatalogItems(TITLES, PRICES);
         this.basket = basket;
-        this._render();
-        this._handleEvents();
+        
+        this._get(this.url)
+        .then(catalog => {
+            this.items = catalog;
+            this._render();
+            this._handleEvents();
+        });
+    },
+    _get(url) {
+        return fetch(url).then(d => d.json()); //сделает запрос за джейсоном, дождется ответа и преобразует джейсон в объект, который вернется из данного метода
     },
     _render() {
         let htmlStr = '';
@@ -36,10 +32,6 @@ const catalog = {
                 // console.log('КУПЛЕНО!')
                 let id = event.target.dataset.id; //from data-id
                 let item = this.items.find(el => el.productId == id);
-
-                item = Object.assign({}, item, {
-                    productAmount: 1
-                });
                 this.basket.add(item);
             }
         });
@@ -66,7 +58,6 @@ function createCatalogItem(index, TITLES, PRICES) {
 function renderCatalogTemplate(item, i) {
     return `
     <div class="product" id="p1">
-            <img src="../src/assets/images/p${1 + i}.jpg" alt="p1">
             <div class="shadow">
                 <button class="shadowBtn"
                 name="add"
@@ -75,6 +66,7 @@ function renderCatalogTemplate(item, i) {
                     <img src="../src/assets/images/w_cart.png" alt="cart"> <span>Add to Cart</span>
                 </button>
             </div>
+            <img class="featuredProduct" src="${item.productImg}" alt="">
             <div class="product-desc"> ${item.productName}
                 <div class="price">$${item.productPrice}</div>
             </div>

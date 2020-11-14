@@ -1,15 +1,6 @@
 function initBasket() {
-    let TITLES = [
-        'MANGO PEOPLE T-SHIRT',
-        'BANANA PEOPLE T-SHIRT',
-    ];
     let cart= document.getElementById('cart');
     cart.onclick=showBasket;
-
-    let PRICES = [52, 68];
-
-    let AMOUNTS = [4, 2];
-
     const basket = {
         items: [],
         total: null,
@@ -18,14 +9,21 @@ function initBasket() {
         wrapper: null, //basket all
         sum: 0,
         totalContainer: null,
+        url: 'https://raw.githubusercontent.com/Lizunchik/static/main/basket.json',
         init() {
             this.container = document.querySelector('#cart-card-products');
             
             this.wrapper = document.querySelector('#cart-card');
             this.totalContainer = document.querySelector('#basket-sum');
-            this.items = getBasketItems(TITLES, PRICES, AMOUNTS);
-            this._render();
-            this._handleEvents();
+            this._get(this.url)
+            .then(basket => {
+                this.items = basket.content;
+                this._render();
+                this._handleEvents();
+            });
+        },
+        _get(url) {
+            return fetch(url).then(d => d.json()); //сделает запрос за джейсоном, дождется ответа и преобразует джейсон в объект, который вернется из данного метода
         },
         _render() {
             let htmlStr = '';
@@ -40,23 +38,31 @@ function initBasket() {
         _calcSum() {
             this.sum = 0;
             this.items.forEach(item => {
-                this.sum += item.productAmount * item.productPrice;
+                this.sum += item.amount * item.productPrice;
             });
 
             this.totalContainer.innerText = this.sum + '$';
         },
         add(item) {
-            let basketItem =this.items.find(el=>el.productName==item.productName);
-            if (basketItem){
-                basketItem.productAmount++;
+            let find = this.items.find(el => item.productId == el.productId);
+
+            if(find) {
+                find.amount++;
+            } else {
+                this.items.push(Object.assign({}, item, { amount: 1 }));
             }
-            else{
-                this.items.push(item);
-            }
+ 
             this._render();
         },
-        _remove(item) {
-            this.items.splice(this.items.indexOf(item), 1);
+        _remove(id) {
+            let find = this.items.find(el => el.productId == id);
+
+            if(find.amount > 1) {
+                find.amount--;
+            } else {
+                this.items.splice(this.items.indexOf(find), 1);
+            }
+
             this._render();
         },
         _handleEvents() {
@@ -67,9 +73,8 @@ function initBasket() {
                 }
                 if (event.target.className =='remove'){
 
-                    let id = event.target.dataset.id; //from data-id
-                    let item = this.items.find(el => el.productId == id);
-                    this._remove(item);
+                    let id = event.target.dataset.id; 
+                    this._remove(id);
                 }
             });
         }
@@ -110,11 +115,11 @@ function createBasketItem(index, TITLES, PRICES, AMOUNTS) {
 function renderBasketTemplate(item, i) {
     return `
     <div class="product-card">
-        <img src="../src/assets/images/mini${i + 1}.png" alt="mini">
+        <img src="${item.productImg}" alt="mini">
         <div class="cart-product-info">
             <span>${item.productName}</span>  <br>
             <img src="../src/assets/images/stars.png" alt="stars"> <br>
-            <span>${item.productAmount} x $${item.productPrice}</span> 
+            <span>${item.amount} x $${item.productPrice}</span> 
         </div>
         <div class ='remove'
         data-id="${item.productId}"
