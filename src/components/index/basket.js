@@ -72,7 +72,6 @@ function initBasket() {
                     this.wrapper.style.display='none';
                 }
                 if (event.target.className =='remove'){
-                    var a =7++;
                     let id = event.target.dataset.id; 
                     this._remove(id);
                 }
