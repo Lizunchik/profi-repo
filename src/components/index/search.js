@@ -41,14 +41,12 @@ Vue.component("searchwrap", {
 
       },
       mounted() {
-        // получить список товаров
         this._get(this.url)
             .then(catalog => {
                 this.goodsList = catalog;
             });
           
       },
-      // Общие методы
       methods: {
         _get(url) {
             return fetch(url).then(d => d.json());
