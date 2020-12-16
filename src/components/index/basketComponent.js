@@ -1,41 +1,56 @@
-Vue.component("headerCart", {
+Vue.component("cartcard", {
+    props: ["items", 'total'],
     template: `
-    <button id="cartButton"><img src="../src/assets/images/cart.svg" alt="" id="cart"
-    name="cart"></button>
-<div id="cart-card">
-<div id="cart-card-products">
-    <div v-for="good in goodsBasketList" class="goods-item">
-        <div class="product-card">
-            <img :src='good.productImg' alt="mini">
-            <div class="cart-product-info">
-                <span>{{good.productName}}</span>  <br>
-                <img src="../src/assets/images/stars.png" alt="stars"> <br>
-                <span>{{good.amount}} x $ {{good.productPrice}}</span> 
+
+        <div id="cart-card">
+            <div id="cart-card-products">
+                <div v-for="good in items" class="goods-item">
+                    <div class="product-card">
+                        <img :src='good.productImg' alt="mini">
+                        <div class="cart-product-info">
+                            <span>{{good.productName}}</span>  <br>
+                            <img src="../src/assets/images/stars.png" alt="stars"> <br>
+                            <span>{{good.amount}} x $ {{good.productPrice}}</span> 
+                        </div>
+                        <div class ='remove'
+                        :data-id="good.productId"
+                        >X</div>
+                </div>
+                    </div>
+                    </div>
+            <div id="total-cart">
+                <div>Total</div>
+                <div id="basket-sum" >
+                <p>{{total}}</p>
+                </div>
             </div>
-            <div class ='remove'
-            :data-id="good.productId"
-            >X</div>
+            <div class="bottom-cart">
+                <a href="">Checkout</a>
+                <a href="">Go to cart</a>
         </div>
-    </div>
-</div>
-<div id="total-cart">
-    <div>Total</div>
-    <div id="basket-sum" >
-       <p>{{totalContainer}}</p>
-    </div>
-</div>
-<div class="bottom-cart">
-    <a href="">Checkout</a>
-    <a href="">Go to cart</a>
-</div>
 </div>
       `,
-      data: {
-        isVisibleCart: false,
-        totalContainer: '',
-        sum: 0,
-        goodsBasketList: [],
-        url: 'https://raw.githubusercontent.com/Lizunchik/static/main/basket.json'
+});
+
+let basket = Vue.component("headercarttag", {
+    template: `
+<div id="headerCart">
+        <button v-on:click='cartClick' id="cartButton"><img src="../src/assets/images/cart.svg" alt="" id="cart"
+            name="cart"></button>
+        <cartcard :items="goodsBasketList" :total='totalContainer'>
+
+    </cartcard>
+</div>
+      `,
+      data() {
+        return{
+            isVisibleCart: false,
+            totalContainer: '',
+            sum: 0,
+            goodsBasketList: [],
+            url: 'https://raw.githubusercontent.com/Lizunchik/static/main/basket.json'
+        }
+
     },
     mounted() {
         this._get(this.url)
@@ -60,6 +75,10 @@ Vue.component("headerCart", {
             });
 
             this.totalContainer = this.sum + '$';
+        },
+        cartClick(){
+            let container = document.getElementById('cart-card');
+            container.style.display = 'flex';
         },
         _handleEvents() {
 
