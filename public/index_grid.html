@@ -20,8 +20,8 @@
                 <div class="searchBrowse">
                     Browse <img src="../src/assets/images/bottom-arrow.png" alt="arrow">
                 </div>
-                <input placeholder="Search for Item..." type="text">
-                <button>
+                <input v-model="filterSearch" placeholder="Search for Item..." type="text">
+                <button v-on:click="updateGoodsList">
                     <img src="../src/assets/images/lupa.png" alt="lupa" name="cart">
                 </button>
             </form>
@@ -31,12 +31,27 @@
                     <button id="cartButton"><img src="../src/assets/images/cart.svg" alt="" id="cart"
                             name="cart"></button>
                     <div id="cart-card">
+                      
                         <div id="cart-card-products">
-
+                            <div v-for="good in goodsBasketList" class="goods-item">
+                                <div class="product-card">
+                                    <img :src='good.productImg' alt="mini">
+                                    <div class="cart-product-info">
+                                        <span>{{good.productName}}</span>  <br>
+                                        <img src="../src/assets/images/stars.png" alt="stars"> <br>
+                                        <span>{{good.amount}} x $ {{good.productPrice}}</span> 
+                                    </div>
+                                    <div class ='remove'
+                                    :data-id="good.productId"
+                                    >X</div>
+                                </div>
+                            </div>
                         </div>
                         <div id="total-cart">
                             <div>Total</div>
-                            <div id="basket-sum"></div>
+                            <div id="basket-sum" >
+                               <p>{{totalContainer}}</p>
+                            </div>
                         </div>
                         <div class="bottom-cart">
                             <a href="">Checkout</a>
@@ -262,13 +277,12 @@
 
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="../src/components/index/basket.js"></script>
     <script src="../src/components/index/catalog.js"></script>
 
     <script>
-        var basket = initBasket();
-        basket.init();
+
 
         var catalog = initCatalog();
         catalog.init(basket);
