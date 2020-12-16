@@ -1,8 +1,36 @@
-var basket = new Vue({
-    el: "#headerCart",
-    children:['#cart-card'],
-    vnode: '#cart-card',
-    data: {
+Vue.component("headerCart", {
+    template: `
+    <button id="cartButton"><img src="../src/assets/images/cart.svg" alt="" id="cart"
+    name="cart"></button>
+<div id="cart-card">
+<div id="cart-card-products">
+    <div v-for="good in goodsBasketList" class="goods-item">
+        <div class="product-card">
+            <img :src='good.productImg' alt="mini">
+            <div class="cart-product-info">
+                <span>{{good.productName}}</span>  <br>
+                <img src="../src/assets/images/stars.png" alt="stars"> <br>
+                <span>{{good.amount}} x $ {{good.productPrice}}</span> 
+            </div>
+            <div class ='remove'
+            :data-id="good.productId"
+            >X</div>
+        </div>
+    </div>
+</div>
+<div id="total-cart">
+    <div>Total</div>
+    <div id="basket-sum" >
+       <p>{{totalContainer}}</p>
+    </div>
+</div>
+<div class="bottom-cart">
+    <a href="">Checkout</a>
+    <a href="">Go to cart</a>
+</div>
+</div>
+      `,
+      data: {
         isVisibleCart: false,
         totalContainer: '',
         sum: 0,
@@ -59,12 +87,9 @@ var basket = new Vue({
         },
     },
 });
-let cart = document.getElementById('cart');
-cart.onclick = showBasket;
-
-function showBasket(eventObj) {
-    console.log(eventObj);
-    let container = document.getElementById('cart-card');
-    container.style.display = 'flex';
-    basket.isVisibleCart=true;
-}
+const app = new Vue({
+    el: "#headerInsideRight",
+    data: {
+      name: "Username",
+    },
+  });
