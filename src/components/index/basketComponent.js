@@ -112,7 +112,6 @@ let basket = Vue.component("headercarttag", {
                 .then(() => this._get(this.url).then(basket => {
                     this.goodsBasketList = basket.data.content;
                 }));
-        
         },
     },
 });
