@@ -31,8 +31,18 @@ const catalog = {
             if (event.target.name == 'add') {
                 // console.log('КУПЛЕНО!')
                 let id = event.target.dataset.id; //from data-id
-                let item = this.items.find(el => el.productId == id);
-                this.basket.add(item);
+                let item = this.items.find(el => el.id== id);
+
+                fetch('http://localhost:3000/basket/content', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                //body: JSON.stringify({productName: item.productName, productPrice: item.productPrice, productImg: item.productImg, productId: item.productId, amount: 1} )
+                body: JSON.stringify({productName: item.productName, productPrice: item.productPrice, productImg: item.productImg, amount: 1, id: item.id} )
+            }
+        ).then(this.basket.extendOptions.methods.render());
+        
             }
         });
     }
@@ -61,7 +71,7 @@ function renderCatalogTemplate(item, i) {
             <div class="shadow">
                 <button class="shadowBtn"
                 name="add"
-                data-id="${item.productId}"
+                data-id="${item.id}"
                 >
                     <img src="../src/assets/images/w_cart.png" alt="cart"> <span>Add to Cart</span>
                 </button>

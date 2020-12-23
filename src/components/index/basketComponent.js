@@ -48,25 +48,30 @@ let basket = Vue.component("headercarttag", {
             totalContainer: '',
             sum: 0,
             goodsBasketList: [],
-            url: 'https://raw.githubusercontent.com/Lizunchik/static/main/basket.json'
+            url: 'http://localhost:3000/basket'
         }
 
     },
     mounted() {
-        this._get(this.url)
-            .then(basket => {
-                this.goodsBasketList = basket.content;
-            });
 
+        this.render();
         this._handleEvents();
     },
+
     updated() {
         this._calcSum();
 
     },
     methods: {
+        render(){
+            this._get(this.url)
+                .then(basket => {
+                    this.goodsBasketList = basket.data.content;
+                });
+        },
         _get(url) {
-            return fetch(url).then(d => d.json());
+            return fetch('http://localhost:3000/basket',
+                ).then(d => d.json());
         },
         _calcSum() {
             this.sum = 0;
@@ -79,6 +84,7 @@ let basket = Vue.component("headercarttag", {
         cartClick(){
             let container = document.getElementById('cart-card');
             container.style.display = 'flex';
+            this.render();
         },
         _handleEvents() {
 
@@ -96,13 +102,17 @@ let basket = Vue.component("headercarttag", {
 
         },
         _remove(id) {
-            let find = this.goodsBasketList.find(el => el.productId == id);
 
-            if (find.amount > 1) {
-                find.amount--;
-            } else {
-                this.goodsBasketList.splice(this.goodsBasketList.indexOf(find), 1);
-            }
+        fetch(`http://localhost:3000/basket/${id}`, {
+                    method: "DELETE",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                })
+                .then(() => this._get(this.url).then(basket => {
+                    this.goodsBasketList = basket.data.content;
+                }));
+        
         },
     },
 });
