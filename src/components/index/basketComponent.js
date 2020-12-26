@@ -9,7 +9,7 @@ Vue.component("cartcard", {
                         <img :src='good.productImg' alt="mini">
                         <div class="cart-product-info">
                             <span>{{good.productName}}</span>  <br>
-                            <img src="../src/assets/images/stars.png" alt="stars"> <br>
+                            <img src="../../src/assets/images/stars.png" alt="stars"> <br>
                             <span>{{good.amount}} x $ {{good.productPrice}}</span> 
                         </div>
                         <div class ='remove'
@@ -35,7 +35,7 @@ Vue.component("cartcard", {
 let basket = Vue.component("headercarttag", {
     template: `
 <div id="headerCart">
-        <button v-on:click='cartClick' id="cartButton"><img src="../src/assets/images/cart.svg" alt="" id="cart"
+        <button v-on:click='cartClick' id="cartButton"><img src="../../src/assets/images/cart.svg" alt="" id="cart"
             name="cart"></button>
         <cartcard :items="goodsBasketList" :total='totalContainer'>
 
