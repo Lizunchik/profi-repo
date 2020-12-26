@@ -73,7 +73,7 @@ function renderCatalogTemplate(item, i) {
                 name="add"
                 data-id="${item.id}"
                 >
-                    <img src="../src/assets/images/w_cart.png" alt="cart"> <span>Add to Cart</span>
+                    <img src="../../src/assets/images/w_cart.png" alt="cart"> <span>Add to Cart</span>
                 </button>
             </div>
             <img class="featuredProduct" src="${item.productImg}" alt="">

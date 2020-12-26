@@ -2,10 +2,10 @@
   "name": "geekbrains",
   "version": "1.0.0",
   "description": "profi-repo",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "build": "nodemon node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack -w --config webpack.config.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,12 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "lodash": "^4.17.20",
     "lowdb": "^1.0.0",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "webpack": "^5.11.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.3.0"
   }
 }
