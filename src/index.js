@@ -1,8 +1,7 @@
 console.log('lol');
-//const bodyParser = require("body-parser");
-//import bodyParser from "body-parser";
+import bodyParser from "body-parser";
 //import _ from "lodash";
-const express = require('express');
+/* const express = require('express');
 
 const bodyParser = require("body-parser");
 const app = express();
@@ -70,4 +69,4 @@ app.delete("/basket/:id", (req, res) => {
 
 app.listen(3000, () => {
   console.log('server is running on port 3000!');
-});
+}); */

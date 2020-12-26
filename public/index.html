@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../src/layout/styles/style.css">
+    <link rel="stylesheet" href="../src/layout/styles/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <title>Main Grid</title>
@@ -19,11 +20,11 @@
             <searchwrap>
            <form class="searchWrap">
                 <div class="searchBrowse">
-                    Browse <img src="../../src/assets/images/bottom-arrow.png" alt="arrow">
+                    Browse <img src="../src/assets/images/bottom-arrow.png" alt="arrow">
                 </div>
                 <input v-model="filterSearch" placeholder="Search for Item..." type="text">
                 <button v-on:click="updateGoodsList">
-                    <img src="../../src/assets/images/lupa.png" alt="lupa" name="cart">
+                    <img src="../src/assets/images/lupa.png" alt="lupa" name="cart">
                 </button> 
             </form>
         </searchwrap>
@@ -31,7 +32,7 @@
             
                 <headercarttag></headercarttag>
                 <button class="accountBtn">
-                    My Account<img src="../../src/assets/images/white-arrow.png" alt="arrow">
+                    My Account<img src="../src/assets/images/white-arrow.png" alt="arrow">
                 </button>
             </div>
     </header>
@@ -85,7 +86,7 @@
 
     </div>
     <div class="container center">
-        <button class="brouseBtn">Browse All Product <img src="../../src/assets/images/arrow-right.png"
+        <button class="brouseBtn">Browse All Product <img src="../src/assets/images/arrow-right.png"
                 alt="arrow-right"></button>
     </div>
     <div class="offer_block container">
@@ -98,7 +99,7 @@
         <div class="advantages">
 
             <div class="advantage">
-                <img src="../../src/assets/images/offer_icon1.svg" alt="offer_icon1">
+                <img src="../src/assets/images/offer_icon1.svg" alt="offer_icon1">
                 <div class="offer_desc">
                     <div class="advantage-header">Free Delivery</div>
                     <div class="advantage_text">Worldwide delivery on all. Authorit tively morph next-generation innov
@@ -107,7 +108,7 @@
 
             </div>
             <div class="advantage">
-                <img src="../../src/assets/images/offer_icon2.svg" alt="offer_icon1">
+                <img src="../src/assets/images/offer_icon2.svg" alt="offer_icon1">
                 <div class="offer_desc">
                     <div class="advantage-header">Sales & discounts</div>
                     <div class="advantage_text">Worldwide delivery on all. Authorit tively morph next-generation innov
@@ -115,7 +116,7 @@
                 </div>
             </div>
             <div class="advantage">
-                <img src="../../src/assets/images/offer_icon3.svg" alt="offer_icon1">
+                <img src="../src/assets/images/offer_icon3.svg" alt="offer_icon1">
                 <div class="offer_desc">
                     <div class="advantage-header">Quality assurance</div>
                     <div class="advantage_text">Worldwide delivery on all. Authorit tively morph next-generation innov
@@ -134,7 +135,7 @@
 
                     <div class="reviewUnitRight col-md-10">
                         <div>
-                            <img src="../../src/assets/images/ava.png" alt="">
+                            <img src="../src/assets/images/ava.png" alt="">
                         </div>
                         <div class="col-md-10">
                             <blockquote>
@@ -235,11 +236,10 @@
 
         </div>
     </div>
-    <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="../../src/components/index/basketComponent.js"></script>
+    <script src="../src/components/index/basketComponent.js"></script>
   
-    <script src="../../src/components/index/catalog.js"></script>
+    <script src="../src/components/index/catalog.js"></script>
   
     <script>
 
