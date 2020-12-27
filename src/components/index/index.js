@@ -36,8 +36,6 @@ app.get("/users", (req, res) => {
 app.post("/basket/content", (req, res) => {
 
   let arr = db.get("basket").value().content;
-  console.log(arr);
-  console.log(req.body.id);
   let item =  arr.find(x=> x.id == req.body.id);
   if (item){
       item.amount++;
