@@ -1,12 +1,7 @@
-console.log('lol');
-//const bodyParser = require("body-parser");
-//import bodyParser from "body-parser";
-//import _ from "lodash";
-const express = require('express');
 
+const express = require('express');
 const bodyParser = require("body-parser");
 const app = express();
-
 const cors = require("cors");
 
 const low = require("lowdb");
