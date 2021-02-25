@@ -11,25 +11,29 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="container headerInside">
+    <header class="header container-fluid">
+        <div class="container headerInside" id="headerInside">
             <div class="logo">
                 BRAN<span>D</span>
             </div>
-            <form class="searchWrap">
+            <searchwrap>
+           <form class="searchWrap">
                 <div class="searchBrowse">
-                    Browse <img src="img/bottom-arrow.png" alt="arrow">
+                    Browse <img src="../src/assets/images/bottom-arrow.png" alt="arrow">
                 </div>
-                <input placeholder="Search for Item..." type="text">
-                <button>
-                    <img src="img/lupa.png" alt="lupa">
-                </button>
+                <input v-model="filterSearch" placeholder="Search for Item..." type="text">
+                <button v-on:click="updateGoodsList">
+                    <img src="../src/assets/images/lupa.png" alt="lupa" name="cart">
+                </button> 
             </form>
-            <img class="headerCart" src="../src/assets/images/cart.svg" alt="">
-            <button class="accountBtn">
-                My Account<img src="../src/assets/images/white-arrow.png" alt="arrow">
-            </button>
-        </div>
+        </searchwrap>
+            <div class="headerInside_right" id ="headerInsideRight">
+            
+                <headercarttag></headercarttag>
+                <button class="accountBtn">
+                    My Account<img src="../src/assets/images/white-arrow.png" alt="arrow">
+                </button>
+            </div>
     </header>
     <div class="topNav">
         <a href="">Home</a>
@@ -102,7 +106,7 @@
                     </div>
                 </div>
                 <div class="addToCart">
-                    <img src="img/pink_cart.png" alt="pink_cart"> Add to Cart
+                    <img src="../src/assets/images/pink_cart.png" alt="pink_cart"> Add to Cart
                 </div>
 
             </article>
@@ -113,26 +117,26 @@
         <div class="like_also_header"> you may like also</div>
         <div class="galery">
             <div>
-                <img src="img/also1.png" alt="also"> <br>
+                <img src="../src/assets/images/also1.png" alt="also"> <br>
                 <div>
                     <span>BLAZE LEGGINGS</span><br><span>$52.00</span>
                 </div> 
             </div>
             <div>
-                <img src="img/also2.png" alt="also">
+                <img src="../src/assets/images/also2.png" alt="also">
                 <div>
                     <span>BLAZE LEGGINGS</span><br><span>$52.00</span>
                 </div> 
             </div>
             <div>
-                <img src="img/also3.png" alt="also">
+                <img src="../src/assets/images/also3.png" alt="also">
                 <div>
                     <span>BLAZE LEGGINGS</span><br><span>$52.00</span>
                 </div> 
             </div>
             <div>
 
-                <img src="img/also4.png" alt="also">
+                <img src="../src/assets/images/also4.png" alt="also">
                 <div>
                     <span>BLAZE LEGGINGS</span><br><span>$52.00</span>
                 </div> 
@@ -148,7 +152,7 @@
 
                     <div class="reviewUnitRight col-md-10">
                         <div>
-                            <img src="img/ava.png" alt="">
+                            <img src="../src/assets/images/ava.png" alt="">
                         </div>
                         <div class="col-md-10">
                             <blockquote>
@@ -249,6 +253,8 @@
 
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="../src/components/index/basketComponent.js"></script>
 </body>
 
 </html>

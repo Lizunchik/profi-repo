@@ -28,7 +28,13 @@ body {
     }
 
     .headerInside_right {
-        margin-left: auto;
+        
+        @include media-breakpoint-up(md) {
+            margin-left: auto;
+        }
+        @include media-breakpoint-down(md) {
+            padding: 10px;
+        }
 
         #cart-card {
             width: 262px;
@@ -1726,6 +1732,7 @@ footer {
             font-weight: 700;
             transition-duration: 1s;
             transform: scale(1.3, 1.3);
+           
 
             &:hover {
                 background-color: wheat;
@@ -1736,6 +1743,9 @@ footer {
 
             @media (min-width:590px) {
                 width: 537px;
+            }
+            @media (max-width:550px) {
+                max-width: 50%;
             }
 
             img {

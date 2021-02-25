@@ -10836,8 +10836,16 @@ body {
   }
 }
 
-.headerInside .headerInside_right {
-  margin-left: auto;
+@media (min-width: 768px) {
+  .headerInside .headerInside_right {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .headerInside .headerInside_right {
+    padding: 10px;
+  }
 }
 
 .headerInside .headerInside_right #cart-card {
@@ -12748,6 +12756,12 @@ footer {
 @media (min-width: 590px) {
   .card .content article .addToCart {
     width: 537px;
+  }
+}
+
+@media (max-width: 550px) {
+  .card .content article .addToCart {
+    max-width: 50%;
   }
 }
 
