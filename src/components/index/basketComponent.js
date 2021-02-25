@@ -26,7 +26,7 @@ Vue.component("cartcard", {
             </div>
             <div class="bottom-cart">
                 <a href="">Checkout</a>
-                <a href="">Go to cart</a>
+                <a href="../public/cart.html">Go to cart</a>
         </div>
 </div>
       `,

@@ -10806,6 +10806,87 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+#cartItemsHeader {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.cartItem {
+  width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+  padding: 20px;
+}
+
+.cartItem .cartItemBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #656565;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.cartItem .cartItemBlock img {
+  display: inline-block;
+  width: 100px;
+  height: 115px;
+}
+
+.cartItem .cartItemBlock .cartItemInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cartItem .cartItemBlock .unitPrice, .cartItem .cartItemBlock .shipping, .cartItem .cartItemBlock .action, .cartItem .cartItemBlock .subtotal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cartItem .cartItemBlock .quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 54px;
+  text-align: center;
+}
+
+.cartItem .cartItemBlock .quantity div:first-child {
+  height: 30px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+}
+
 .header {
   min-height: 100px;
   margin-top: 15px;
